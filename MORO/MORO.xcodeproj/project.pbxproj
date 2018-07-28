@@ -13,6 +13,10 @@
 		CB1B070A210C3C1A00378CAB /* RootPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1B0709210C3C1A00378CAB /* RootPageViewController.swift */; };
 		CB1B070C210C3C5A00378CAB /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1B070B210C3C5A00378CAB /* MainViewController.swift */; };
 		CB1B070E210C3C7D00378CAB /* RoomListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1B070D210C3C7D00378CAB /* RoomListViewController.swift */; };
+		CB1B0714210C4E9C00378CAB /* NanumSquareRoundB.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CB1B0712210C4CEA00378CAB /* NanumSquareRoundB.ttf */; };
+		CB1B0715210C4E9C00378CAB /* NanumSquareRoundEB.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CB1B0711210C4CEA00378CAB /* NanumSquareRoundEB.ttf */; };
+		CB1B0716210C4E9C00378CAB /* NanumSquareRoundL.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CB1B0713210C4CEB00378CAB /* NanumSquareRoundL.ttf */; };
+		CB1B0717210C4E9C00378CAB /* NanumSquareRoundR.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CB1B0710210C4CEA00378CAB /* NanumSquareRoundR.ttf */; };
 		CB318A82210C2C7A00A704B5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB318A81210C2C7A00A704B5 /* AppDelegate.swift */; };
 		CB318A84210C2C7A00A704B5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB318A83210C2C7A00A704B5 /* ViewController.swift */; };
 		CB318A87210C2C7A00A704B5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB318A85210C2C7A00A704B5 /* Main.storyboard */; };
@@ -29,6 +33,10 @@
 		CB1B0709210C3C1A00378CAB /* RootPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootPageViewController.swift; sourceTree = "<group>"; };
 		CB1B070B210C3C5A00378CAB /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		CB1B070D210C3C7D00378CAB /* RoomListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomListViewController.swift; sourceTree = "<group>"; };
+		CB1B0710210C4CEA00378CAB /* NanumSquareRoundR.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareRoundR.ttf; sourceTree = "<group>"; };
+		CB1B0711210C4CEA00378CAB /* NanumSquareRoundEB.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareRoundEB.ttf; sourceTree = "<group>"; };
+		CB1B0712210C4CEA00378CAB /* NanumSquareRoundB.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareRoundB.ttf; sourceTree = "<group>"; };
+		CB1B0713210C4CEB00378CAB /* NanumSquareRoundL.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareRoundL.ttf; sourceTree = "<group>"; };
 		CB318A7E210C2C7A00A704B5 /* MORO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MORO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB318A81210C2C7A00A704B5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CB318A83210C2C7A00A704B5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -50,6 +58,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CB1B070F210C4CD200378CAB /* font */ = {
+			isa = PBXGroup;
+			children = (
+				CB1B0712210C4CEA00378CAB /* NanumSquareRoundB.ttf */,
+				CB1B0711210C4CEA00378CAB /* NanumSquareRoundEB.ttf */,
+				CB1B0713210C4CEB00378CAB /* NanumSquareRoundL.ttf */,
+				CB1B0710210C4CEA00378CAB /* NanumSquareRoundR.ttf */,
+			);
+			path = font;
+			sourceTree = "<group>";
+		};
 		CB318A75210C2C7A00A704B5 = {
 			isa = PBXGroup;
 			children = (
@@ -71,6 +90,7 @@
 		CB318A80210C2C7A00A704B5 /* MORO */ = {
 			isa = PBXGroup;
 			children = (
+				CB1B070F210C4CD200378CAB /* font */,
 				CB318A81210C2C7A00A704B5 /* AppDelegate.swift */,
 				CB318A83210C2C7A00A704B5 /* ViewController.swift */,
 				CB1B0709210C3C1A00378CAB /* RootPageViewController.swift */,
@@ -163,6 +183,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB1B0714210C4E9C00378CAB /* NanumSquareRoundB.ttf in Resources */,
+				CB1B0715210C4E9C00378CAB /* NanumSquareRoundEB.ttf in Resources */,
+				CB1B0716210C4E9C00378CAB /* NanumSquareRoundL.ttf in Resources */,
+				CB1B0717210C4E9C00378CAB /* NanumSquareRoundR.ttf in Resources */,
 				CB318A8C210C2C7D00A704B5 /* LaunchScreen.storyboard in Resources */,
 				CB318A89210C2C7D00A704B5 /* Assets.xcassets in Resources */,
 				03B9FEF6210C3D1E00A8FF45 /* AlertStoryboard.storyboard in Resources */,
