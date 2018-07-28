@@ -6,6 +6,8 @@ target 'MORO' do
   use_frameworks!
   pod 'Alamofire'
   pod 'FCUUID'
+  pod 'SnapKit'
+  pod 'Reveal-SDK', :configurations => ['Debug']
   # Pods for MORO
 
 end
