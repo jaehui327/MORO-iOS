@@ -29,6 +29,7 @@
 		EF45854D210C6EDC00BBB03B /* BlueBerryLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF45854C210C6EDC00BBB03B /* BlueBerryLabelView.swift */; };
 		EF45854F210C9FF200BBB03B /* WhiteImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF45854E210C9FF200BBB03B /* WhiteImageView.swift */; };
 		EF458551210C9FFA00BBB03B /* WhiteLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF458550210C9FFA00BBB03B /* WhiteLabelView.swift */; };
+		EF458553210CBEBB00BBB03B /* CustomPageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF458552210CBEBB00BBB03B /* CustomPageControl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,7 @@
 		EF45854C210C6EDC00BBB03B /* BlueBerryLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueBerryLabelView.swift; sourceTree = "<group>"; };
 		EF45854E210C9FF200BBB03B /* WhiteImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiteImageView.swift; sourceTree = "<group>"; };
 		EF458550210C9FFA00BBB03B /* WhiteLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiteLabelView.swift; sourceTree = "<group>"; };
+		EF458552210CBEBB00BBB03B /* CustomPageControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPageControl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				CB1B070B210C3C5A00378CAB /* MainViewController.swift */,
 				EF45854E210C9FF200BBB03B /* WhiteImageView.swift */,
 				EF458550210C9FFA00BBB03B /* WhiteLabelView.swift */,
+				EF458552210CBEBB00BBB03B /* CustomPageControl.swift */,
 			);
 			name = Main;
 			sourceTree = "<group>";
@@ -320,6 +323,7 @@
 				EF458549210C689C00BBB03B /* TimeMainListTableViewCell.swift in Sources */,
 				03B9FEF4210C3B5100A8FF45 /* JoinAlertViewController.swift in Sources */,
 				EF45854D210C6EDC00BBB03B /* BlueBerryLabelView.swift in Sources */,
+				EF458553210CBEBB00BBB03B /* CustomPageControl.swift in Sources */,
 				CB1B070C210C3C5A00378CAB /* MainViewController.swift in Sources */,
 				CB9E630C210C82E800A6C117 /* BorderTextField.swift in Sources */,
 			);

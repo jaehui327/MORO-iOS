@@ -28,14 +28,13 @@ class RootPageViewController: UIPageViewController {
         
         return imageView
     }()
-    
-    private var scrollView: UIScrollView?
-    
+
     private var pageControl: UIPageControl = UIPageControl()
     
-    private var viewControllerList : [UIViewController] = {
+    private lazy var viewControllerList : [UIViewController] = {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc1 = storyboard.instantiateViewController(withIdentifier: "MainViewController")
+        let vc1 = storyboard.instantiateViewController(withIdentifier: "MainViewController") as! MainViewController
+        vc1.delegate = self
         let vc2 = storyboard.instantiateViewController(withIdentifier: "RoomListViewController")
         
         return [vc1, vc2]
@@ -53,6 +52,11 @@ class RootPageViewController: UIPageViewController {
         addConstraints()
         setBackground()
         initPageViewController()
+    }
+    
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        pageControl.frame = CGRect(x: 0,y: UIScreen.main.bounds.maxY - (view.safeAreaInsets.bottom + 20),width: UIScreen.main.bounds.width,height: 11)
     }
     
     override func didReceiveMemoryWarning() {
@@ -86,6 +90,7 @@ class RootPageViewController: UIPageViewController {
         }
         backgroundImageView.layer.zPosition = -100
     }
+    
     private func initPageViewController() {
         configurePageControl()
         
@@ -96,12 +101,8 @@ class RootPageViewController: UIPageViewController {
     }
     
     private func configurePageControl() {
-        pageControl = UIPageControl(frame: CGRect(x: 0,y: UIScreen.main.bounds.maxY - 20,width: UIScreen.main.bounds.width,height: 11))
-        pageControl.numberOfPages = viewControllerList.count
-        pageControl.currentPage = 0
-        pageControl.tintColor = UIColor.black
-        pageControl.pageIndicatorTintColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.8)
-        pageControl.currentPageIndicatorTintColor = UIColor(red: 85/255, green: 64/255, blue: 147/255, alpha: 1)
+        pageControl = CustomPageControl(frame: .zero)
+            pageControl.numberOfPages = viewControllerList.count
         view.addSubview(pageControl)
     }
 }
@@ -110,17 +111,6 @@ extension RootPageViewController: UIPageViewControllerDelegate {
     func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
         let pageContentViewController = pageViewController.viewControllers![0]
         pageControl.currentPage = viewControllerList.index(of: pageContentViewController)!
-        
-        UIView.animate(withDuration: 0.5) { [weak self] in
-            if let index = self?.viewControllerList.index(of: pageContentViewController) {
-                if index == 0 {
-                    self?.roomView.alpha = 1
-                } else {
-                    self?.roomView.alpha = 0
-                }
-                self?.view.layoutIfNeeded()
-            }
-        }
     }
 }
 
@@ -157,10 +147,20 @@ extension RootPageViewController: UIPageViewControllerDataSource {
         guard viewControllerList.count > nextIndex else {
             return nil
         }
+        return viewControllerList[nextIndex]
+    }
+}
+
+extension RootPageViewController: mainViewControllerDelegate {
+    func mainViewWillAppear() {
+        UIView.animate(withDuration: 0.5) { [weak self] in
+            self?.roomView.alpha = 1
+        }
+    }
+    
+    func mainViewWillDisappear() {
         UIView.animate(withDuration: 0.5) { [weak self] in
             self?.roomView.alpha = 0
-            self?.view.layoutIfNeeded()
         }
-        return viewControllerList[nextIndex]
     }
 }
