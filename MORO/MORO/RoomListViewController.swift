@@ -7,29 +7,68 @@
 //
 
 import UIKit
+import SnapKit
 
 class RoomListViewController: UIViewController {
-
+    private var backgroundImageView: UIImageView = {
+        let imageView: UIImageView = UIImageView()
+        imageView.image = #imageLiteral(resourceName: "backgroundShort")
+        
+        return imageView
+    }()
+    
+    private lazy var tableView: UITableView = {
+        var tableView: UITableView = UITableView.init(frame: .zero, style: .plain)
+        tableView.backgroundColor = .clear
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.separatorInset.left = 10000
+        tableView.register(TimeHeaderTableViewCell.self, forCellReuseIdentifier: "TimeHeaderTableViewCell")
+        tableView.register(TimeMainListTableViewCell.self, forCellReuseIdentifier: "TimeMainListTableViewCell")
+        return tableView
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        addSubViews()
+        addConstraints()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    private func addSubViews() {
+        view.addSubview(backgroundImageView)
+        view.addSubview(tableView)
     }
-    */
+    
+    private func addConstraints() {
+        backgroundImageView.snp.makeConstraints {
+            $0.top.bottom.leading.trailing.equalToSuperview()
+        }
+        
+        tableView.snp.makeConstraints {
+            $0.top.bottom.leading.trailing.equalToSuperview()
+        }
+    }
+}
 
+extension RoomListViewController: UITableViewDataSource, UITableViewDelegate {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 3
+    }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 10
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if indexPath.row == 0, let headerCell = tableView.dequeueReusableCell(withIdentifier: "TimeHeaderTableViewCell", for: indexPath) as? TimeHeaderTableViewCell {
+            return headerCell }
+        
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "TimeMainListTableViewCell", for: indexPath) as? TimeMainListTableViewCell else { return UITableViewCell() }
+        
+        return cell
+    }
 }
