@@ -71,49 +71,66 @@
                                 <color key="textColor" name="blueberry"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="방 이름을 입력해주세요" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="U4d-ct-jWU" customClass="BorderTextField" customModule="MORO" customModuleProvider="target">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="방 이름" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="U4d-ct-jWU" customClass="BorderTextField" customModule="MORO" customModuleProvider="target">
                                 <rect key="frame" x="135" y="265" width="220" height="27"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="27" id="r8h-hY-9Ge"/>
                                 </constraints>
                                 <color key="textColor" name="blueberry"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="NanumSquareRoundR" family="NanumSquareRound" pointSize="15"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="참가인원을 설정해주세요" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vk0-Xc-Tsc" customClass="BorderTextField" customModule="MORO" customModuleProvider="target">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="참가인원" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vk0-Xc-Tsc" customClass="BorderTextField" customModule="MORO" customModuleProvider="target">
                                 <rect key="frame" x="136" y="322" width="219" height="27"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="27" id="yYF-Fg-q2g"/>
                                 </constraints>
                                 <color key="textColor" name="blueberry"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="NanumSquareRoundR" family="NanumSquareRound" pointSize="15"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="자격조건을 설정해주세요" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hj9-T5-2BI" customClass="BorderTextField" customModule="MORO" customModuleProvider="target">
-                                <rect key="frame" x="136" y="379" width="219" height="27"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="레벨" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hj9-T5-2BI" customClass="BorderTextField" customModule="MORO" customModuleProvider="target">
+                                <rect key="frame" x="159" y="379" width="73" height="27"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" constant="73" id="BQ3-nP-7xD"/>
                                     <constraint firstAttribute="height" constant="27" id="dVB-Yk-cyW"/>
                                 </constraints>
                                 <color key="textColor" name="blueberry"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="NanumSquareRoundR" family="NanumSquareRound" pointSize="15"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lv" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lja-5a-exO">
+                                <rect key="frame" x="136" y="385" width="16" height="17"/>
+                                <fontDescription key="fontDescription" name="NanumSquareRoundR" family="NanumSquareRound" pointSize="15"/>
+                                <color key="textColor" name="blueberry"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이상" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YX5-pb-JDH">
+                                <rect key="frame" x="239" y="385" width="28" height="17"/>
+                                <fontDescription key="fontDescription" name="NanumSquareRoundR" family="NanumSquareRound" pointSize="15"/>
+                                <color key="textColor" name="blueberry"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="fl6-We-dot" firstAttribute="top" secondItem="Sg0-Zb-Zvk" secondAttribute="bottom" constant="41" id="2lB-OT-ZFe"/>
                             <constraint firstItem="Sg0-Zb-Zvk" firstAttribute="leading" secondItem="DYb-dY-648" secondAttribute="leading" constant="20" id="2wn-XG-MzZ"/>
                             <constraint firstItem="icJ-gU-lFP" firstAttribute="top" secondItem="CKX-74-8AG" secondAttribute="bottom" constant="18" id="Ad6-Ek-Ay0"/>
                             <constraint firstItem="ZYd-41-vKu" firstAttribute="leading" secondItem="DYb-dY-648" secondAttribute="leading" id="Cii-Fw-pBZ"/>
-                            <constraint firstItem="hj9-T5-2BI" firstAttribute="leading" secondItem="fl6-We-dot" secondAttribute="trailing" constant="61" id="Coq-lc-sxf"/>
+                            <constraint firstItem="lja-5a-exO" firstAttribute="top" secondItem="vk0-Xc-Tsc" secondAttribute="bottom" constant="36" id="HCk-Nu-dNP"/>
                             <constraint firstItem="DYb-dY-648" firstAttribute="trailing" secondItem="U4d-ct-jWU" secondAttribute="trailing" constant="20" id="HHJ-Ct-Cb5"/>
                             <constraint firstItem="ZYd-41-vKu" firstAttribute="top" secondItem="DYb-dY-648" secondAttribute="top" id="Qrr-B8-goP"/>
-                            <constraint firstItem="DYb-dY-648" firstAttribute="trailing" secondItem="hj9-T5-2BI" secondAttribute="trailing" constant="20" id="Tf1-TM-2Sf"/>
                             <constraint firstItem="DYb-dY-648" firstAttribute="trailing" secondItem="vk0-Xc-Tsc" secondAttribute="trailing" constant="20" id="Ubd-h1-Mbc"/>
                             <constraint firstItem="ZYd-41-vKu" firstAttribute="trailing" secondItem="DYb-dY-648" secondAttribute="trailing" id="VZY-cJ-ha6"/>
+                            <constraint firstItem="YX5-pb-JDH" firstAttribute="leading" secondItem="hj9-T5-2BI" secondAttribute="trailing" constant="7" id="Wzr-O2-sNt"/>
+                            <constraint firstItem="YX5-pb-JDH" firstAttribute="top" secondItem="vk0-Xc-Tsc" secondAttribute="bottom" constant="36" id="YAI-H8-eVh"/>
                             <constraint firstItem="Sg0-Zb-Zvk" firstAttribute="top" secondItem="icJ-gU-lFP" secondAttribute="bottom" constant="41" id="ZE1-UT-NTa"/>
                             <constraint firstItem="vk0-Xc-Tsc" firstAttribute="leading" secondItem="Sg0-Zb-Zvk" secondAttribute="trailing" constant="61" id="ZdI-Rs-1xI"/>
                             <constraint firstItem="fl6-We-dot" firstAttribute="leading" secondItem="DYb-dY-648" secondAttribute="leading" constant="20" id="Zy4-9l-8M8"/>
+                            <constraint firstItem="hj9-T5-2BI" firstAttribute="leading" secondItem="lja-5a-exO" secondAttribute="trailing" constant="7" id="aCP-kD-Toh"/>
+                            <constraint firstItem="lja-5a-exO" firstAttribute="leading" secondItem="fl6-We-dot" secondAttribute="trailing" constant="61" id="dxv-yX-bC5"/>
                             <constraint firstItem="CKX-74-8AG" firstAttribute="leading" secondItem="DYb-dY-648" secondAttribute="leading" id="ord-J5-DIX"/>
                             <constraint firstItem="hj9-T5-2BI" firstAttribute="top" secondItem="vk0-Xc-Tsc" secondAttribute="bottom" constant="30" id="p3x-87-k9y"/>
                             <constraint firstItem="U4d-ct-jWU" firstAttribute="leading" secondItem="icJ-gU-lFP" secondAttribute="trailing" constant="70" id="qfq-41-kPE"/>
@@ -124,6 +141,9 @@
                             <constraint firstItem="vk0-Xc-Tsc" firstAttribute="top" secondItem="U4d-ct-jWU" secondAttribute="bottom" constant="30" id="yg2-ed-a41"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="DYb-dY-648"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="e5J-HK-iUB" appends="YES" id="BpV-m5-hER"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="lSQ-PC-fQj">
                         <barButtonItem key="leftBarButtonItem" title="Cancel" id="zcc-P1-keR">
@@ -146,6 +166,12 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rug-3t-Y8x" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="e5J-HK-iUB">
+                    <connections>
+                        <action selector="viewDidTapped:" destination="5Z7-Iy-pC6" id="dU0-Ky-3qL"/>
+                        <outlet property="delegate" destination="5Z7-Iy-pC6" id="otO-Ky-hHn"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="357.60000000000002" y="902.69865067466276"/>
         </scene>
@@ -158,7 +184,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="출발 예정" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t6b-th-NnJ">
-                                <rect key="frame" x="137.5" y="136.5" width="101.5" height="42"/>
+                                <rect key="frame" x="137" y="136.5" width="101.5" height="42"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="41.5" id="5C4-kY-VXk"/>
                                 </constraints>
@@ -288,7 +314,7 @@
             <color red="0.29803921568627451" green="0.15294117647058825" blue="0.37647058823529411" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="blueberry">
-            <color red="0.33300000429153442" green="0.25099998712539673" blue="0.57599997520446777" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.33300000429999999" green="0.25099998709999999" blue="0.57599997520000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
