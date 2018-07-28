@@ -13,6 +13,8 @@ import SnapKit
 protocol MainViewControllerDelegate: class {
     func mainViewWillAppear()
     func mainViewWillDisappear()
+    func rocketlauncher()
+    func completeRocketlauncher()
 }
 
 class MainViewController: UIViewController {
@@ -84,15 +86,23 @@ class MainViewController: UIViewController {
             $0.bottom.equalTo(rocketImageView).offset(offset)
             $0.leading.trailing.equalTo(rocketImageView)
         }
+        
         UIView.animate(withDuration: 1) { [weak self] in
             self?.animationView.alpha = 1
         }
         UIView.animate(withDuration: 3, animations: {
             [weak self] in
+            self?.delegate?.rocketlauncher()
             self?.view.layoutIfNeeded()
         }) { [weak self] _ in
             self?.animationView.stop()
             self?.rocketImageView.alpha = 1
+            self?.rocketView.snp.remakeConstraints {
+                if let `self` = self {
+                    $0.top.bottom.leading.trailing.equalTo(self.rocketImageView)
+                }
+            }
+            self?.delegate?.completeRocketlauncher()
         }
     }
 }

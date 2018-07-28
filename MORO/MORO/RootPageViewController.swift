@@ -174,4 +174,17 @@ extension RootPageViewController: MainViewControllerDelegate {
             self?.roomView.alpha = 0
         }
     }
+    
+    func rocketlauncher() {
+        backgroundImageView.snp.remakeConstraints {
+            $0.top.leading.trailing.equalToSuperview()
+        }
+        view.layoutIfNeeded()
+    }
+    
+    func completeRocketlauncher() {
+        backgroundImageView.snp.remakeConstraints {
+            $0.bottom.leading.trailing.equalToSuperview()
+        }
+    }
 }
