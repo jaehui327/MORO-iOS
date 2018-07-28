@@ -23,7 +23,7 @@ class TimeMainListTableViewCell: UITableViewCell {
         let label: UILabel = UILabel()
         label.font = UIFont.init(name: "NanumSquareRoundR", size: 13)
         label.textColor = #colorLiteral(red: 0.3921568627, green: 0.3921568627, blue: 0.3921568627, alpha: 1)
-        label.text = "꼭 일어나자!afafafafafaa"
+        label.text = "꼭 일어나자!"
 //        label.setContentHuggingPriority(UILayoutPriority(rawValue: 1000), for: .horizontal)
         return label
     }()
