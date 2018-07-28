@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		03B9FEF4210C3B5100A8FF45 /* JoinAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B9FEF3210C3B5100A8FF45 /* JoinAlertViewController.swift */; };
+		03B9FEF6210C3D1E00A8FF45 /* AlertStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03B9FEF5210C3D1E00A8FF45 /* AlertStoryboard.storyboard */; };
 		90FF96A495B5306422E4FC1C /* Pods_MORO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4BAE15A9384494F278C68D3 /* Pods_MORO.framework */; };
 		CB318A82210C2C7A00A704B5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB318A81210C2C7A00A704B5 /* AppDelegate.swift */; };
 		CB318A84210C2C7A00A704B5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB318A83210C2C7A00A704B5 /* ViewController.swift */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		03B9FEF3210C3B5100A8FF45 /* JoinAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinAlertViewController.swift; sourceTree = "<group>"; };
+		03B9FEF5210C3D1E00A8FF45 /* AlertStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AlertStoryboard.storyboard; sourceTree = "<group>"; };
 		25497EA4A0AD028A3C076940 /* Pods-MORO.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MORO.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MORO/Pods-MORO.debug.xcconfig"; sourceTree = "<group>"; };
 		730BDC100EE1D9BC698B99BD /* Pods-MORO.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MORO.release.xcconfig"; path = "Pods/Target Support Files/Pods-MORO/Pods-MORO.release.xcconfig"; sourceTree = "<group>"; };
 		B4BAE15A9384494F278C68D3 /* Pods_MORO.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MORO.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -67,6 +71,8 @@
 				CB318A88210C2C7D00A704B5 /* Assets.xcassets */,
 				CB318A8A210C2C7D00A704B5 /* LaunchScreen.storyboard */,
 				CB318A8D210C2C7D00A704B5 /* Info.plist */,
+				03B9FEF3210C3B5100A8FF45 /* JoinAlertViewController.swift */,
+				03B9FEF5210C3D1E00A8FF45 /* AlertStoryboard.storyboard */,
 			);
 			path = MORO;
 			sourceTree = "<group>";
@@ -150,6 +156,7 @@
 			files = (
 				CB318A8C210C2C7D00A704B5 /* LaunchScreen.storyboard in Resources */,
 				CB318A89210C2C7D00A704B5 /* Assets.xcassets in Resources */,
+				03B9FEF6210C3D1E00A8FF45 /* AlertStoryboard.storyboard in Resources */,
 				CB318A87210C2C7A00A704B5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -206,6 +213,7 @@
 			files = (
 				CB318A84210C2C7A00A704B5 /* ViewController.swift in Sources */,
 				CB318A82210C2C7A00A704B5 /* AppDelegate.swift in Sources */,
+				03B9FEF4210C3B5100A8FF45 /* JoinAlertViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
