@@ -10,6 +10,13 @@ import UIKit
 import SnapKit
 
 class RoomListViewController: UIViewController {
+    private lazy var refreshControl: UIRefreshControl = {
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(handleRefresh(_:)), for: UIControlEvents.valueChanged)
+        refreshControl.tintColor = .white
+        return refreshControl
+    }()
+    
     private var backgroundImageView: UIImageView = {
         let imageView: UIImageView = UIImageView()
         imageView.image = #imageLiteral(resourceName: "backgroundShort")
@@ -50,6 +57,7 @@ class RoomListViewController: UIViewController {
         view.addSubview(backgroundImageView)
         view.addSubview(tableView)
         view.addSubview(makeRoomButton)
+        tableView.addSubview(refreshControl)
     }
     
     private func addConstraints() {
@@ -71,6 +79,11 @@ class RoomListViewController: UIViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let createRoomViewController = storyboard.instantiateViewController(withIdentifier: "CreateRoomViewController")
         present(createRoomViewController, animated: true, completion: nil)
+    }
+    
+    @objc private func handleRefresh(_ refreshControl: UIRefreshControl) {
+        tableView.reloadData()
+        refreshControl.endRefreshing()
     }
 }
 
