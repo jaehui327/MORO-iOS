@@ -1,13 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="azu-QY-jW3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="guj-Rh-3dc">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="NanumSquareRoundB.ttf">
+            <string>NanumSquareRoundB</string>
+        </array>
+        <array key="NanumSquareRoundEB.ttf">
+            <string>NanumSquareRoundEB</string>
+        </array>
+        <array key="NanumSquareRoundR.ttf">
+            <string>NanumSquareRoundR</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Join Alert View Controller-->
         <scene sceneID="VDC-MU-Fh0">
@@ -17,45 +29,85 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Zk-3N-clO">
-                                <rect key="frame" x="39" y="117" width="297" height="341"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Zk-3N-clO">
+                                <rect key="frame" x="52.5" y="182.5" width="270" height="322"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eOo-vp-p0Q">
-                                        <rect key="frame" x="0.0" y="300" width="143" height="33"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="취소"/>
-                                        <connections>
-                                            <action selector="cancelPressed" destination="azu-QY-jW3" eventType="touchUpInside" id="7zQ-Vs-aJw"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mbT-j9-4sk">
-                                        <rect key="frame" x="151" y="300" width="146" height="33"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="확인"/>
-                                        <connections>
-                                            <action selector="confirmPressed" destination="azu-QY-jW3" eventType="touchUpInside" id="C7a-2h-env"/>
-                                        </connections>
-                                    </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="6:00AM 출발예정 로켓입니다. 탑승하시겠습니까?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VDo-eV-ZXK">
-                                        <rect key="frame" x="57" y="223" width="183" height="50"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                        <nil key="textColor"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AM 7:00 출발예정 로켓입니다." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VDo-eV-ZXK">
+                                        <rect key="frame" x="24.5" y="197" width="221" height="19"/>
+                                        <fontDescription key="fontDescription" name="NanumSquareRoundEB" family="NanumSquareRound" pointSize="17"/>
+                                        <color key="textColor" name="blueberry"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iqL-Mb-kRp">
-                                        <rect key="frame" x="74" y="49" width="148" height="148"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rocket" translatesAutoresizingMaskIntoConstraints="NO" id="iqL-Mb-kRp">
+                                        <rect key="frame" x="67" y="35" width="136" height="136"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="136" id="fRQ-jn-zCp"/>
+                                            <constraint firstAttribute="width" constant="136" id="pdg-1Z-BWb"/>
+                                        </constraints>
                                     </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p1a-o7-PaN">
+                                        <rect key="frame" x="38.5" y="226" width="193.5" height="29"/>
+                                        <string key="text">한번 탑승하시면 내리실 수 없습니다.
+탑승하시겠습니까?</string>
+                                        <fontDescription key="fontDescription" name="NanumSquareRoundR" family="NanumSquareRound" pointSize="13"/>
+                                        <color key="textColor" name="brownishGrey"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="f60-kF-aCb">
+                                        <rect key="frame" x="0.0" y="278" width="270" height="44"/>
+                                        <subviews>
+                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eOo-vp-p0Q">
+                                                <rect key="frame" x="0.0" y="0.0" width="135" height="44"/>
+                                                <fontDescription key="fontDescription" name="NanumSquareRoundR" family="NanumSquareRound" pointSize="17"/>
+                                                <state key="normal" title="취소">
+                                                    <color key="titleColor" name="blueberry"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="cancelPressed" destination="azu-QY-jW3" eventType="touchUpInside" id="7zQ-Vs-aJw"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mbT-j9-4sk">
+                                                <rect key="frame" x="135" y="0.0" width="135" height="44"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                                <state key="normal" title="확인">
+                                                    <color key="titleColor" name="blueberry"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="confirmPressed" destination="azu-QY-jW3" eventType="touchUpInside" id="C7a-2h-env"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="cV6-cg-CUy"/>
+                                        </constraints>
+                                    </stackView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="iqL-Mb-kRp" firstAttribute="centerX" secondItem="6Zk-3N-clO" secondAttribute="centerX" id="12z-Ya-6HI"/>
+                                    <constraint firstAttribute="height" constant="322" id="FAl-B9-L3G"/>
+                                    <constraint firstItem="p1a-o7-PaN" firstAttribute="top" secondItem="VDo-eV-ZXK" secondAttribute="bottom" constant="10" id="J4y-Oq-H2z"/>
+                                    <constraint firstItem="VDo-eV-ZXK" firstAttribute="centerX" secondItem="6Zk-3N-clO" secondAttribute="centerX" id="T31-AW-rLO"/>
+                                    <constraint firstItem="p1a-o7-PaN" firstAttribute="centerX" secondItem="6Zk-3N-clO" secondAttribute="centerX" id="XJV-Lj-IiK"/>
+                                    <constraint firstAttribute="width" constant="270" id="a7O-Nx-67D"/>
+                                    <constraint firstItem="iqL-Mb-kRp" firstAttribute="top" secondItem="6Zk-3N-clO" secondAttribute="top" constant="35" id="ayP-5a-FGj"/>
+                                    <constraint firstItem="f60-kF-aCb" firstAttribute="leading" secondItem="6Zk-3N-clO" secondAttribute="leading" id="b1I-4F-bNb"/>
+                                    <constraint firstAttribute="trailing" secondItem="f60-kF-aCb" secondAttribute="trailing" id="cbA-0M-yyY"/>
+                                    <constraint firstItem="VDo-eV-ZXK" firstAttribute="top" secondItem="iqL-Mb-kRp" secondAttribute="bottom" constant="26" id="eCD-Vi-w1L"/>
+                                    <constraint firstAttribute="bottom" secondItem="f60-kF-aCb" secondAttribute="bottom" id="khG-f2-542"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.29658069349999999" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Zk-3N-clO" firstAttribute="centerY" secondItem="gdF-Eu-6US" secondAttribute="centerY" id="LY2-5p-6bb"/>
+                            <constraint firstItem="6Zk-3N-clO" firstAttribute="centerX" secondItem="gdF-Eu-6US" secondAttribute="centerX" id="r7O-YZ-OQ7"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="gdF-Eu-6US"/>
                     </view>
                     <connections>
+                        <outlet property="cancelButton" destination="eOo-vp-p0Q" id="N1l-GW-941"/>
+                        <outlet property="doneButton" destination="mbT-j9-4sk" id="q6w-dO-ICL"/>
                         <outlet property="imgView" destination="iqL-Mb-kRp" id="ewm-BB-RTI"/>
                         <outlet property="labelMessage" destination="VDo-eV-ZXK" id="UQO-zB-5ec"/>
                         <outlet property="popUpView" destination="6Zk-3N-clO" id="yaj-Wg-C0d"/>
@@ -63,7 +115,86 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mEF-iS-LpF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="455" y="-151"/>
+            <point key="canvasLocation" x="465" y="-161"/>
+        </scene>
+        <!--Alarm Off Alert View Controller-->
+        <scene sceneID="vvd-En-gzF">
+            <objects>
+                <viewController id="guj-Rh-3dc" customClass="AlarmOffAlertViewController" customModule="MORO" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bZu-ok-AgY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JWO-o8-jnw">
+                                <rect key="frame" x="53" y="201" width="270" height="285"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="timermonster" translatesAutoresizingMaskIntoConstraints="NO" id="1Oa-py-znn">
+                                        <rect key="frame" x="83" y="32" width="104" height="135"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="135" id="3gH-rS-wWo"/>
+                                            <constraint firstAttribute="width" constant="104" id="sEA-ft-IOB"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="시간안에 알람을 꺼주세요." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6dG-NA-cIR">
+                                        <rect key="frame" x="43.5" y="190" width="183.5" height="19"/>
+                                        <fontDescription key="fontDescription" name="NanumSquareRoundEB" family="NanumSquareRound" pointSize="17"/>
+                                        <color key="textColor" name="blueberry"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="40p-xY-8zx">
+                                        <rect key="frame" x="0.0" y="230" width="270" height="55"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="55" id="aYd-EO-emQ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="NanumSquareRoundB" family="NanumSquareRound" pointSize="17"/>
+                                        <state key="normal" title="알람끄기">
+                                            <color key="titleColor" name="grapePurple"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="6dG-NA-cIR" firstAttribute="top" secondItem="1Oa-py-znn" secondAttribute="bottom" constant="23" id="5js-mV-Bcy"/>
+                                    <constraint firstItem="1Oa-py-znn" firstAttribute="centerX" secondItem="JWO-o8-jnw" secondAttribute="centerX" id="B96-tt-Ubx"/>
+                                    <constraint firstAttribute="width" constant="270" id="LVh-Ec-0EL"/>
+                                    <constraint firstAttribute="bottom" secondItem="40p-xY-8zx" secondAttribute="bottom" id="Ph6-ba-2cC"/>
+                                    <constraint firstItem="1Oa-py-znn" firstAttribute="top" secondItem="JWO-o8-jnw" secondAttribute="top" constant="32" id="Smx-iS-boq"/>
+                                    <constraint firstItem="40p-xY-8zx" firstAttribute="top" secondItem="6dG-NA-cIR" secondAttribute="bottom" constant="21" id="TkJ-ct-WLw"/>
+                                    <constraint firstAttribute="height" constant="285" id="WVW-2w-S91"/>
+                                    <constraint firstItem="40p-xY-8zx" firstAttribute="leading" secondItem="JWO-o8-jnw" secondAttribute="leading" id="nN3-qo-4Up"/>
+                                    <constraint firstItem="6dG-NA-cIR" firstAttribute="centerX" secondItem="JWO-o8-jnw" secondAttribute="centerX" id="umF-0a-HK5"/>
+                                    <constraint firstAttribute="trailing" secondItem="40p-xY-8zx" secondAttribute="trailing" id="zMP-wH-ERC"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="JWO-o8-jnw" firstAttribute="centerY" secondItem="7SQ-IB-Smb" secondAttribute="centerY" id="Bk1-4g-ynX"/>
+                            <constraint firstItem="JWO-o8-jnw" firstAttribute="centerX" secondItem="7SQ-IB-Smb" secondAttribute="centerX" id="wjx-wF-K6Z"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="7SQ-IB-Smb"/>
+                    </view>
+                    <connections>
+                        <outlet property="offAlarmButton" destination="40p-xY-8zx" id="oC3-cZ-HoQ"/>
+                        <outlet property="popUpView" destination="JWO-o8-jnw" id="blU-aO-X25"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="em1-wE-bav" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1372" y="-161"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="rocket" width="136" height="136"/>
+        <image name="timermonster" width="104" height="135"/>
+        <namedColor name="blueberry">
+            <color red="0.33300000429153442" green="0.25099998712539673" blue="0.57599997520446777" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="brownishGrey">
+            <color red="0.39215686274509803" green="0.39215686274509803" blue="0.39215686274509803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="grapePurple">
+            <color red="0.23529411764705882" green="0.11372549019607843" blue="0.3411764705882353" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>

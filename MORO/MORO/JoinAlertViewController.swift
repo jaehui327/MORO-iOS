@@ -12,16 +12,17 @@ class JoinAlertViewController: UIViewController {
     @IBOutlet var popUpView: UIView!
     @IBOutlet var imgView: UIImageView!
     @IBOutlet var labelMessage: UILabel!
+    @IBOutlet weak var cancelButton: UIButton!
+    @IBOutlet weak var doneButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // 테두리 둥글게
-        popUpView.layer.cornerRadius = 10
-        
-        imgView.layer.cornerRadius = 75
-        imgView.clipsToBounds = true
-        
+        popUpView.layer.cornerRadius = 15
+
+        cancelButton.layer.addBorder([.top, .right], color: UIColor.lightGray, width: 0.5)
+        doneButton.layer.addBorder([.top], color: UIColor.lightGray, width: 0.5)
     }
 
     override func didReceiveMemoryWarning() {
@@ -34,15 +35,31 @@ class JoinAlertViewController: UIViewController {
     
     @IBAction func cancelPressed() {
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
+
+extension CALayer {
+    func addBorder(_ arr_edge: [UIRectEdge], color: UIColor, width: CGFloat) {
+        for edge in arr_edge {
+            let border = CALayer()
+            switch edge {
+            case UIRectEdge.top:
+                border.frame = CGRect.init(x: 0, y: 0, width: frame.width, height: width)
+                break
+            case UIRectEdge.bottom:
+                border.frame = CGRect.init(x: 0, y: frame.height - width, width: frame.width, height: width)
+                break
+            case UIRectEdge.left:
+                border.frame = CGRect.init(x: 0, y: 0, width: width, height: frame.height)
+                break
+            case UIRectEdge.right:
+                border.frame = CGRect.init(x: frame.width - width, y: 0, width: width, height: frame.height)
+                break
+            default:
+                break
+            }
+            border.backgroundColor = color.cgColor;
+            self.addSublayer(border)
+        }
+    }
+}
+
