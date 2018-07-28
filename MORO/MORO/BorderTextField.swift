@@ -11,10 +11,14 @@ import UIKit
 class BorderTextField: UITextField {
     override func awakeFromNib() {
         super.awakeFromNib()
-        let color = UIColor(red: 85/255, green: 64/255, blue: 147/255, alpha: 1)
-        layer.borderColor = color.cgColor
+        layer.borderColor = #colorLiteral(red: 0.3330000043, green: 0.2509999871, blue: 0.5759999752, alpha: 1)
         layer.borderWidth = 1
         layer.cornerRadius = 10
         clipsToBounds = true
+        
+        let spaceView: UIView = UIView(frame: .init(x: 0, y: 0, width: 10, height: 10))
+        leftView = spaceView
+        leftViewMode = .always
+
     }
 }

@@ -7,6 +7,8 @@ class CreateRoomViewController: UIViewController {
     @IBOutlet weak var minLevelTextField: UITextField!
     
     override func viewDidLoad() {
-
+        super.viewDidLoad()
+        
     }
+
 }
