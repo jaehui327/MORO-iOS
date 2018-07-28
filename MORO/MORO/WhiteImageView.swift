@@ -34,7 +34,9 @@ class WhiteImageView: UIView {
     }
     
     func setData(text: String) {
-//        imageView.image = 
+        if let level = levels.init(rawValue: text) {
+            imageView.image = levels.getImage(level)()
+        }
         label.text = "Lv.\(text)"
     }
     
