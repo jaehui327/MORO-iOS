@@ -232,6 +232,12 @@
                                 <rect key="frame" x="130.5" y="586" width="148" height="13"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wff-cs-ROB">
+                                <rect key="frame" x="184.5" y="85.5" width="7" height="29"/>
+                                <fontDescription key="fontDescription" name="NanumSquareRoundR" family="NanumSquareRound" pointSize="26"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -241,9 +247,11 @@
                             <constraint firstItem="0jB-Lk-0Tx" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="80:333.5" constant="5.5" id="Ah8-dl-Fvn"/>
                             <constraint firstItem="t6b-th-NnJ" firstAttribute="top" secondItem="0jB-Lk-0Tx" secondAttribute="firstBaseline" constant="10" id="Bd2-bQ-OmU"/>
                             <constraint firstItem="0jB-Lk-0Tx" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="DUF-uy-hLP"/>
+                            <constraint firstItem="Wff-cs-ROB" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="DV2-Tj-RiN"/>
                             <constraint firstItem="WSX-NX-BmN" firstAttribute="leading" secondItem="4rO-mn-owa" secondAttribute="leading" id="JM6-LH-qdV"/>
                             <constraint firstItem="t6b-th-NnJ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="MKG-mb-yEs"/>
                             <constraint firstItem="nbN-Ds-IBw" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="NuQ-Dj-Yjn"/>
+                            <constraint firstItem="Wff-cs-ROB" firstAttribute="top" secondItem="0jB-Lk-0Tx" secondAttribute="top" id="S0h-cQ-jbi"/>
                             <constraint firstItem="nbN-Ds-IBw" firstAttribute="top" secondItem="SJQ-qm-g6f" secondAttribute="bottom" constant="20" id="T1M-tY-5c8"/>
                             <constraint firstItem="WSX-NX-BmN" firstAttribute="top" secondItem="4rO-mn-owa" secondAttribute="top" id="UOg-9l-vmw"/>
                             <constraint firstItem="WSX-NX-BmN" firstAttribute="width" secondItem="4rO-mn-owa" secondAttribute="width" id="VdS-10-wga"/>
@@ -266,6 +274,8 @@
                         <outlet property="HPHideLeadingConstraint" destination="JM6-LH-qdV" id="kGq-ZY-gIf"/>
                         <outlet property="rocketImageView" destination="SJQ-qm-g6f" id="mUP-7g-mQA"/>
                         <outlet property="알람시간" destination="0jB-Lk-0Tx" id="pdv-Cs-P7f"/>
+                        <outlet property="엠티라벨" destination="Wff-cs-ROB" id="CEl-jK-na9"/>
+                        <outlet property="출발예정" destination="t6b-th-NnJ" id="H4z-nM-HBh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

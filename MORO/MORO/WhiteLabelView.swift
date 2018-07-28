@@ -35,6 +35,15 @@ class WhiteLabelView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    func setData(text: String) {
+        if text == "" {
+            isHidden = true
+        } else {
+            isHidden = false
+            roomLabel.text = "\(text)"
+        }
+    }
+    
     private func commonInit() {
         backgroundColor = .white
         layer.cornerRadius = 18.5

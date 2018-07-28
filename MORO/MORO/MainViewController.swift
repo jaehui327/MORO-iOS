@@ -24,6 +24,8 @@ class MainViewController: UIViewController {
     @IBOutlet weak var HPGuage: UIImageView!
     @IBOutlet weak var HPHideLeadingConstraint: NSLayoutConstraint!
     @IBOutlet weak var 알람시간: UILabel!
+    @IBOutlet weak var 출발예정: UILabel!
+    @IBOutlet weak var 엠티라벨: UILabel!
     
     //MARK: properties
     private var rocketView: UIImageView = {
@@ -39,12 +41,6 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let button = UIButton.init(frame: .init(x: 20, y: 100, width: 100, height: 100))
-        button.addTarget(self, action: #selector(playAnimate), for: .touchUpInside)
-        button.backgroundColor = .red
-        button.setTitle("test", for: .normal)
-        view.addSubview(button)
-        
         Network.request(req: MainRequest()) { [weak self] result in
             switch result {
             case .success(let result):
@@ -58,7 +54,6 @@ class MainViewController: UIViewController {
             }
         }
         view.backgroundColor = .clear
-        setAnimateView()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -95,8 +90,32 @@ class MainViewController: UIViewController {
         guard let model = model else {
             return
         }
-        알람시간.text = model.alarmTime
         
+        if isEntered(model: model) {
+            알람시간.text = model.alarmTime
+            출발예정.text = "출발예정"
+            rocketImageView.image = #imageLiteral(resourceName: "rocketon")
+            엠티라벨.text = ""
+        } else {
+            알람시간.text = ""
+            출발예정.text = ""
+            엠티라벨.text = """
+            출발 예정인
+            로켓이 없습니다.
+            """
+            
+            rocketImageView.image =  #imageLiteral(resourceName: "rocketoff")
+        }
+        
+        
+        
+    }
+    
+    private func isEntered(model: MainModel) -> Bool {
+        if model.alarmTime == "" {
+            return false
+        }
+        return true
     }
     
     @objc private func playAnimate() {
