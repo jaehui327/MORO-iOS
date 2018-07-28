@@ -209,9 +209,63 @@
                                 <rect key="frame" x="130.5" y="586" width="148" height="13"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
+                            <view alpha="0.90000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bhG-Xx-NzA">
+                                <rect key="frame" x="20" y="40" width="80" height="37"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Lv4" translatesAutoresizingMaskIntoConstraints="NO" id="3kI-bP-GaW">
+                                        <rect key="frame" x="6" y="6" width="25" height="25"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="25" id="0gG-PH-Chc"/>
+                                            <constraint firstAttribute="height" constant="25" id="8ru-9t-clM"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lv.4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EmJ-Fd-sGd">
+                                        <rect key="frame" x="41" y="10.5" width="28" height="17"/>
+                                        <fontDescription key="fontDescription" name="NanumSquareRoundB" family="NanumSquareRound" pointSize="15"/>
+                                        <color key="textColor" name="blueberry"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="3kI-bP-GaW" firstAttribute="centerY" secondItem="bhG-Xx-NzA" secondAttribute="centerY" id="5et-xq-Xln"/>
+                                    <constraint firstAttribute="trailing" secondItem="EmJ-Fd-sGd" secondAttribute="trailing" constant="11" id="Kn9-Bd-9q0"/>
+                                    <constraint firstItem="EmJ-Fd-sGd" firstAttribute="leading" secondItem="3kI-bP-GaW" secondAttribute="trailing" constant="10" id="Tdq-Ma-tGG"/>
+                                    <constraint firstItem="EmJ-Fd-sGd" firstAttribute="centerY" secondItem="bhG-Xx-NzA" secondAttribute="centerY" id="VPr-ZW-qaY"/>
+                                    <constraint firstAttribute="height" constant="37" id="jd6-L6-5vq"/>
+                                    <constraint firstAttribute="width" constant="80" id="n0p-6k-oa5"/>
+                                </constraints>
+                            </view>
+                            <view alpha="0.90000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IxE-l0-LO5">
+                                <rect key="frame" x="192.5" y="40" width="202.5" height="37"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="꼭 일어나자!!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L1s-E0-9h3">
+                                        <rect key="frame" x="20" y="10" width="81.5" height="17"/>
+                                        <fontDescription key="fontDescription" name="NanumSquareRoundB" family="NanumSquareRound" pointSize="15"/>
+                                        <color key="textColor" name="blueberry"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lv.3~5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DNe-hc-Xeb">
+                                        <rect key="frame" x="116.5" y="10" width="46" height="17"/>
+                                        <fontDescription key="fontDescription" name="NanumSquareRoundB" family="NanumSquareRound" pointSize="15"/>
+                                        <color key="textColor" name="blueberry"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="DNe-hc-Xeb" secondAttribute="trailing" constant="40" id="8IT-Uw-rN7"/>
+                                    <constraint firstItem="L1s-E0-9h3" firstAttribute="centerY" secondItem="IxE-l0-LO5" secondAttribute="centerY" id="C9q-Sv-x2h"/>
+                                    <constraint firstAttribute="height" constant="37" id="FQ4-z3-AfJ"/>
+                                    <constraint firstItem="DNe-hc-Xeb" firstAttribute="leading" secondItem="L1s-E0-9h3" secondAttribute="trailing" constant="15" id="M3u-Y4-bfh"/>
+                                    <constraint firstItem="DNe-hc-Xeb" firstAttribute="centerY" secondItem="IxE-l0-LO5" secondAttribute="centerY" id="sPZ-le-MoD"/>
+                                    <constraint firstItem="L1s-E0-9h3" firstAttribute="leading" secondItem="IxE-l0-LO5" secondAttribute="leading" constant="20" id="t1C-Wc-65u"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="IxE-l0-LO5" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="40:333.5" id="0IZ-XE-8p1"/>
                             <constraint firstItem="BOc-km-Pz6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="5Vm-0p-bgA"/>
                             <constraint firstItem="SJQ-qm-g6f" firstAttribute="centerX" secondItem="BOc-km-Pz6" secondAttribute="centerX" id="7Fc-cZ-Xff"/>
                             <constraint firstItem="BOc-km-Pz6" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="7gE-9e-nqA"/>
@@ -229,11 +283,14 @@
                             <constraint firstItem="qWO-Jx-MK1" firstAttribute="leading" secondItem="nbN-Ds-IBw" secondAttribute="leading" constant="8" id="d8B-LC-6Rd"/>
                             <constraint firstItem="SJQ-qm-g6f" firstAttribute="top" secondItem="t6b-th-NnJ" secondAttribute="bottom" constant="35" id="fTE-MA-wSS"/>
                             <constraint firstItem="81p-Fp-7iO" firstAttribute="trailing" secondItem="nbN-Ds-IBw" secondAttribute="trailing" constant="-8" id="g7a-So-chp"/>
+                            <constraint firstItem="bhG-Xx-NzA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="i9E-uD-tmS"/>
                             <constraint firstItem="WSX-NX-BmN" firstAttribute="trailing" secondItem="4rO-mn-owa" secondAttribute="trailing" id="iRk-fK-W7B"/>
                             <constraint firstItem="t6b-th-NnJ" firstAttribute="centerX" secondItem="BOc-km-Pz6" secondAttribute="centerX" id="kSh-Gm-b4D"/>
+                            <constraint firstItem="bhG-Xx-NzA" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="40:333.5" id="mDa-md-3T6"/>
                             <constraint firstItem="4rO-mn-owa" firstAttribute="centerY" secondItem="81p-Fp-7iO" secondAttribute="centerY" id="mbO-La-Rti"/>
                             <constraint firstItem="qWO-Jx-MK1" firstAttribute="centerY" secondItem="nbN-Ds-IBw" secondAttribute="centerY" id="mpt-rD-TIa"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="nbN-Ds-IBw" secondAttribute="bottom" constant="60" id="pz6-63-8wd"/>
+                            <constraint firstAttribute="trailing" secondItem="IxE-l0-LO5" secondAttribute="trailing" constant="-20" id="qwE-dM-lBp"/>
                             <constraint firstItem="4rO-mn-owa" firstAttribute="centerX" secondItem="81p-Fp-7iO" secondAttribute="centerX" id="raZ-AD-yhc"/>
                             <constraint firstItem="81p-Fp-7iO" firstAttribute="centerY" secondItem="nbN-Ds-IBw" secondAttribute="centerY" id="zUq-bs-bet"/>
                         </constraints>
@@ -242,6 +299,8 @@
                     <connections>
                         <outlet property="HPGuage" destination="4rO-mn-owa" id="h7z-Yp-IyI"/>
                         <outlet property="HPHideLeadingConstraint" destination="JM6-LH-qdV" id="kGq-ZY-gIf"/>
+                        <outlet property="levelView" destination="bhG-Xx-NzA" id="bfe-Wx-3ct"/>
+                        <outlet property="roomInfoView" destination="IxE-l0-LO5" id="Oby-RX-WTU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -285,12 +344,16 @@
     </scenes>
     <resources>
         <image name="BGFULL" width="360" height="1300"/>
+        <image name="Lv4" width="25" height="25"/>
         <image name="hPbg" width="203" height="29"/>
         <image name="hPgauge" width="148" height="13"/>
         <image name="hPgaugebg" width="154" height="17"/>
         <image name="rocketon" width="190" height="308"/>
         <namedColor name="Grape">
             <color red="0.29803921568627451" green="0.15294117647058825" blue="0.37647058823529411" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="blueberry">
+            <color red="0.33300000429153442" green="0.25099998712539673" blue="0.57599997520446777" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="blueberry">
             <color red="0.33300000429153442" green="0.25099998712539673" blue="0.57599997520446777" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
