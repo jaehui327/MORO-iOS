@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		03B9FEF4210C3B5100A8FF45 /* JoinAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B9FEF3210C3B5100A8FF45 /* JoinAlertViewController.swift */; };
 		03B9FEF6210C3D1E00A8FF45 /* AlertStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03B9FEF5210C3D1E00A8FF45 /* AlertStoryboard.storyboard */; };
+		03B9FF34210CE17E00A8FF45 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 03B9FF33210CE17E00A8FF45 /* GoogleService-Info.plist */; };
 		90FF96A495B5306422E4FC1C /* Pods_MORO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4BAE15A9384494F278C68D3 /* Pods_MORO.framework */; };
 		CB01BC8D210CC8DE009C3337 /* AlarmOffAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB01BC8C210CC8DE009C3337 /* AlarmOffAlertViewController.swift */; };
 		CB01BC8F210CCDB1009C3337 /* LaunchRochetAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB01BC8E210CCDB1009C3337 /* LaunchRochetAlertViewController.swift */; };
@@ -43,6 +44,8 @@
 /* Begin PBXFileReference section */
 		03B9FEF3210C3B5100A8FF45 /* JoinAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinAlertViewController.swift; sourceTree = "<group>"; };
 		03B9FEF5210C3D1E00A8FF45 /* AlertStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AlertStoryboard.storyboard; sourceTree = "<group>"; };
+		03B9FF33210CE17E00A8FF45 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		03B9FF35210CECC500A8FF45 /* MORO.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MORO.entitlements; sourceTree = "<group>"; };
 		25497EA4A0AD028A3C076940 /* Pods-MORO.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MORO.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MORO/Pods-MORO.debug.xcconfig"; sourceTree = "<group>"; };
 		730BDC100EE1D9BC698B99BD /* Pods-MORO.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MORO.release.xcconfig"; path = "Pods/Target Support Files/Pods-MORO/Pods-MORO.release.xcconfig"; sourceTree = "<group>"; };
 		B4BAE15A9384494F278C68D3 /* Pods_MORO.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MORO.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -175,6 +178,8 @@
 		CB318A80210C2C7A00A704B5 /* MORO */ = {
 			isa = PBXGroup;
 			children = (
+				03B9FF35210CECC500A8FF45 /* MORO.entitlements */,
+				03B9FF33210CE17E00A8FF45 /* GoogleService-Info.plist */,
 				CB311FA5210C8C1B00EE61ED /* Main */,
 				CB311FA6210C8C3200EE61ED /* List */,
 				CB311FA9210C8C7700EE61ED /* CreateRoom */,
@@ -277,6 +282,14 @@
 				TargetAttributes = {
 					CB318A7D210C2C7A00A704B5 = {
 						CreatedOnToolsVersion = 9.4.1;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -310,6 +323,7 @@
 				CB1B0717210C4E9C00378CAB /* NanumSquareRoundR.ttf in Resources */,
 				CB318A8C210C2C7D00A704B5 /* LaunchScreen.storyboard in Resources */,
 				CB318A89210C2C7D00A704B5 /* Assets.xcassets in Resources */,
+				03B9FF34210CE17E00A8FF45 /* GoogleService-Info.plist in Resources */,
 				03B9FEF6210C3D1E00A8FF45 /* AlertStoryboard.storyboard in Resources */,
 				CB318A87210C2C7A00A704B5 /* Main.storyboard in Resources */,
 			);
@@ -345,19 +359,25 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-MORO/Pods-MORO-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/FCUUID/FCUUID.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${PODS_ROOT}/Reveal-SDK/RevealServer-16/iOS/RevealServer.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 				"${BUILT_PRODUCTS_DIR}/UICKeyChainStore/UICKeyChainStore.framework",
 				"${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FCUUID.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RevealServer.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UICKeyChainStore.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Lottie.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -536,6 +556,7 @@
 			baseConfigurationReference = 25497EA4A0AD028A3C076940 /* Pods-MORO.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MORO/MORO.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TA757FA6NR;
 				INFOPLIST_FILE = MORO/Info.plist;
@@ -556,6 +577,7 @@
 			baseConfigurationReference = 730BDC100EE1D9BC698B99BD /* Pods-MORO.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MORO/MORO.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TA757FA6NR;
 				INFOPLIST_FILE = MORO/Info.plist;
