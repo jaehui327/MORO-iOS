@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		90FF96A495B5306422E4FC1C /* Pods_MORO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4BAE15A9384494F278C68D3 /* Pods_MORO.framework */; };
+		CB1B070A210C3C1A00378CAB /* RootPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1B0709210C3C1A00378CAB /* RootPageViewController.swift */; };
+		CB1B070C210C3C5A00378CAB /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1B070B210C3C5A00378CAB /* MainViewController.swift */; };
+		CB1B070E210C3C7D00378CAB /* RoomListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1B070D210C3C7D00378CAB /* RoomListViewController.swift */; };
 		CB318A82210C2C7A00A704B5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB318A81210C2C7A00A704B5 /* AppDelegate.swift */; };
 		CB318A84210C2C7A00A704B5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB318A83210C2C7A00A704B5 /* ViewController.swift */; };
 		CB318A87210C2C7A00A704B5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB318A85210C2C7A00A704B5 /* Main.storyboard */; };
@@ -19,6 +22,9 @@
 		25497EA4A0AD028A3C076940 /* Pods-MORO.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MORO.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MORO/Pods-MORO.debug.xcconfig"; sourceTree = "<group>"; };
 		730BDC100EE1D9BC698B99BD /* Pods-MORO.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MORO.release.xcconfig"; path = "Pods/Target Support Files/Pods-MORO/Pods-MORO.release.xcconfig"; sourceTree = "<group>"; };
 		B4BAE15A9384494F278C68D3 /* Pods_MORO.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MORO.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB1B0709210C3C1A00378CAB /* RootPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootPageViewController.swift; sourceTree = "<group>"; };
+		CB1B070B210C3C5A00378CAB /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		CB1B070D210C3C7D00378CAB /* RoomListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomListViewController.swift; sourceTree = "<group>"; };
 		CB318A7E210C2C7A00A704B5 /* MORO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MORO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB318A81210C2C7A00A704B5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CB318A83210C2C7A00A704B5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -63,6 +69,9 @@
 			children = (
 				CB318A81210C2C7A00A704B5 /* AppDelegate.swift */,
 				CB318A83210C2C7A00A704B5 /* ViewController.swift */,
+				CB1B0709210C3C1A00378CAB /* RootPageViewController.swift */,
+				CB1B070B210C3C5A00378CAB /* MainViewController.swift */,
+				CB1B070D210C3C7D00378CAB /* RoomListViewController.swift */,
 				CB318A85210C2C7A00A704B5 /* Main.storyboard */,
 				CB318A88210C2C7D00A704B5 /* Assets.xcassets */,
 				CB318A8A210C2C7D00A704B5 /* LaunchScreen.storyboard */,
@@ -204,8 +213,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB1B070A210C3C1A00378CAB /* RootPageViewController.swift in Sources */,
 				CB318A84210C2C7A00A704B5 /* ViewController.swift in Sources */,
+				CB1B070E210C3C7D00378CAB /* RoomListViewController.swift in Sources */,
 				CB318A82210C2C7A00A704B5 /* AppDelegate.swift in Sources */,
+				CB1B070C210C3C5A00378CAB /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
