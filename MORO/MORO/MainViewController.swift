@@ -22,12 +22,14 @@ class MainViewController: UIViewController {
     @IBOutlet weak var rocketImageView: UIImageView!
     @IBOutlet weak var HPGuage: UIImageView!
     @IBOutlet weak var HPHideLeadingConstraint: NSLayoutConstraint!
+    @IBOutlet weak var 알람시간: UILabel!
     
     //MARK: properties
     private var rocketView: UIImageView = {
         let imageView: UIImageView = UIImageView(image: #imageLiteral(resourceName: "rocketon.png"))
         return imageView
     }()
+    private var model: MainModel?
     
     private var animationView: LOTAnimationView = LOTAnimationView(name: "rocketLottie");
     weak var delegate: MainViewControllerDelegate?
@@ -42,6 +44,10 @@ class MainViewController: UIViewController {
         button.setTitle("test", for: .normal)
         view.addSubview(button)
         
+        Request().메인 { result in
+            self.model = result
+            self.refresh()
+        }
         view.backgroundColor = .clear
         setAnimateView()
     }
@@ -74,6 +80,14 @@ class MainViewController: UIViewController {
         }
         animationView.alpha = 0
         animationView.loopAnimation = true
+    }
+    
+    private func refresh() {
+        guard let model = model else {
+            return
+        }
+        알람시간.text = model.alarmTime
+        
     }
     
     @objc private func playAnimate() {
