@@ -37,6 +37,13 @@ class MainViewController: UIViewController {
     private var animationView: LOTAnimationView = LOTAnimationView(name: "rocketLottie");
     weak var delegate: MainViewControllerDelegate?
     
+    override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
+        if motion == .motionShake {
+            playAnimate()
+        }
+        
+        super.motionEnded(motion, with: event)
+    }
     //MARK: life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -183,6 +190,9 @@ class MainViewController: UIViewController {
             }
             self?.delegate?.completeRocketlauncher()
             
+            self?.rocketView.alpha = 0
+            self?.animationView.alpha = 0
+            self?.refresh()
             let storyboard = UIStoryboard(name: "AlertStoryboard", bundle: nil)
             let launchRocketAlertViewController = storyboard.instantiateViewController(withIdentifier: "LaunchRocketAlertViewController")
             self?.present(launchRocketAlertViewController, animated: true, completion: nil)
