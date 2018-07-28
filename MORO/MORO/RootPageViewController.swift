@@ -190,6 +190,6 @@ extension RootPageViewController: MainViewControllerDelegate {
     
     func refresh(result: MainRequest.ResponseType) {
         levelView.setData(text: result.level)
-        roomView.setData(text: result.roomName)
+        roomView.setData(result: result)
     }
 }

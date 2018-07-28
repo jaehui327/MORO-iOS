@@ -9,5 +9,5 @@
 import UIKit
 
 struct MainModel: Codable {
-    let level, alarmTime, numOfUsers, roomName: String
+    let level, alarmTime, numOfUsers, roomName, roomRequirement: String
 }

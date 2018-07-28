@@ -35,12 +35,13 @@ class WhiteLabelView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func setData(text: String) {
-        if text == "" {
+    func setData(result: MainRequest.ResponseType) {
+        if result.roomName == "" {
             isHidden = true
         } else {
             isHidden = false
-            roomLabel.text = "\(text)"
+            roomLabel.text = "\(result.roomName)"
+            label.text = "Lv.\(result.roomRequirement)~5"
         }
     }
     
