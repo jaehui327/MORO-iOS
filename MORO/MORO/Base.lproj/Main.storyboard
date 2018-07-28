@@ -264,6 +264,7 @@
                     <connections>
                         <outlet property="HPGuage" destination="4rO-mn-owa" id="h7z-Yp-IyI"/>
                         <outlet property="HPHideLeadingConstraint" destination="JM6-LH-qdV" id="kGq-ZY-gIf"/>
+                        <outlet property="rocketImageView" destination="SJQ-qm-g6f" id="mUP-7g-mQA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

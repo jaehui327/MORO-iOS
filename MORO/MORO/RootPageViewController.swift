@@ -36,7 +36,6 @@ class RootPageViewController: UIPageViewController {
         let vc1 = storyboard.instantiateViewController(withIdentifier: "MainViewController") as! MainViewController
         vc1.delegate = self
         let vc2 = storyboard.instantiateViewController(withIdentifier: "RoomListViewController")
-        
         return [vc1, vc2]
     }()
     
@@ -48,10 +47,16 @@ class RootPageViewController: UIPageViewController {
         dataSource = self
         delegate = self
         
+        NotificationCenter.default.addObserver(self, selector: #selector(createRoomComplete), name: .createRoom, object: nil)
+        
         addSubViews()
         addConstraints()
         setBackground()
         initPageViewController()
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self, name: .createRoom, object: nil)
     }
     
     override func viewWillLayoutSubviews() {
@@ -95,7 +100,7 @@ class RootPageViewController: UIPageViewController {
         configurePageControl()
         
         //첫번째 뷰컨트롤러 설정
-        if let firstViewController = viewControllerList.first{
+        if let firstViewController = viewControllerList.first {
             setViewControllers([firstViewController], direction: .forward, animated: true, completion: nil)
         }
     }
@@ -104,6 +109,12 @@ class RootPageViewController: UIPageViewController {
         pageControl = CustomPageControl(frame: .zero)
             pageControl.numberOfPages = viewControllerList.count
         view.addSubview(pageControl)
+    }
+    
+    @objc private func createRoomComplete() {
+        if let firstViewController = viewControllerList.first {
+            setViewControllers([firstViewController], direction: .reverse, animated: true, completion: nil)
+        }
     }
 }
 
@@ -151,7 +162,7 @@ extension RootPageViewController: UIPageViewControllerDataSource {
     }
 }
 
-extension RootPageViewController: mainViewControllerDelegate {
+extension RootPageViewController: MainViewControllerDelegate {
     func mainViewWillAppear() {
         UIView.animate(withDuration: 0.5) { [weak self] in
             self?.roomView.alpha = 1

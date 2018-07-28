@@ -32,6 +32,8 @@
 		EF45854F210C9FF200BBB03B /* WhiteImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF45854E210C9FF200BBB03B /* WhiteImageView.swift */; };
 		EF458551210C9FFA00BBB03B /* WhiteLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF458550210C9FFA00BBB03B /* WhiteLabelView.swift */; };
 		EF458553210CBEBB00BBB03B /* CustomPageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF458552210CBEBB00BBB03B /* CustomPageControl.swift */; };
+		EFD62908210CC314006C8403 /* Notification+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD62907210CC314006C8403 /* Notification+Utility.swift */; };
+		EFD6290C210CCE73006C8403 /* rocketLottie.json in Resources */ = {isa = PBXBuildFile; fileRef = EFD6290B210CCE73006C8403 /* rocketLottie.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +66,8 @@
 		EF45854E210C9FF200BBB03B /* WhiteImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiteImageView.swift; sourceTree = "<group>"; };
 		EF458550210C9FFA00BBB03B /* WhiteLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiteLabelView.swift; sourceTree = "<group>"; };
 		EF458552210CBEBB00BBB03B /* CustomPageControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPageControl.swift; sourceTree = "<group>"; };
+		EFD62907210CC314006C8403 /* Notification+Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+Utility.swift"; sourceTree = "<group>"; };
+		EFD6290B210CCE73006C8403 /* rocketLottie.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = rocketLottie.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,10 +97,12 @@
 			isa = PBXGroup;
 			children = (
 				CB1B070F210C4CD200378CAB /* font */,
+				EFD6290B210CCE73006C8403 /* rocketLottie.json */,
 				CB318A88210C2C7D00A704B5 /* Assets.xcassets */,
 				CB318A8A210C2C7D00A704B5 /* LaunchScreen.storyboard */,
 				CB318A8D210C2C7D00A704B5 /* Info.plist */,
 				CB318A81210C2C7A00A704B5 /* AppDelegate.swift */,
+				EFD62907210CC314006C8403 /* Notification+Utility.swift */,
 			);
 			name = supportingFiles;
 			sourceTree = "<group>";
@@ -106,9 +112,7 @@
 			children = (
 				CB1B0709210C3C1A00378CAB /* RootPageViewController.swift */,
 				CB1B070B210C3C5A00378CAB /* MainViewController.swift */,
-				EF45854E210C9FF200BBB03B /* WhiteImageView.swift */,
-				EF458550210C9FFA00BBB03B /* WhiteLabelView.swift */,
-				EF458552210CBEBB00BBB03B /* CustomPageControl.swift */,
+				EFD62905210CC185006C8403 /* Views */,
 			);
 			name = Main;
 			sourceTree = "<group>";
@@ -117,10 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				CB1B070D210C3C7D00378CAB /* RoomListViewController.swift */,
-				EF458546210C5EC000BBB03B /* TimeHeaderTableViewCell.swift */,
-				EF458548210C689C00BBB03B /* TimeMainListTableViewCell.swift */,
-				EF45854A210C6ED000BBB03B /* BlueberryImageView.swift */,
-				EF45854C210C6EDC00BBB03B /* BlueBerryLabelView.swift */,
+				EFD62904210CC175006C8403 /* Views */,
 			);
 			name = List;
 			sourceTree = "<group>";
@@ -140,7 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				CB1B071A210C77C800378CAB /* CreateRoomViewController.swift */,
-				CB9E630B210C82E800A6C117 /* BorderTextField.swift */,
+				EFD62906210CC18D006C8403 /* Views */,
 			);
 			name = CreateRoom;
 			sourceTree = "<group>";
@@ -166,14 +167,43 @@
 		CB318A80210C2C7A00A704B5 /* MORO */ = {
 			isa = PBXGroup;
 			children = (
-				CB311FA7210C8C5100EE61ED /* Alert */,
-				CB311FA6210C8C3200EE61ED /* List */,
 				CB311FA5210C8C1B00EE61ED /* Main */,
-				CB1D31DA210C8BB5005FBD54 /* supportingFiles */,
+				CB311FA6210C8C3200EE61ED /* List */,
 				CB311FA9210C8C7700EE61ED /* CreateRoom */,
+				CB311FA7210C8C5100EE61ED /* Alert */,
+				CB1D31DA210C8BB5005FBD54 /* supportingFiles */,
 				CB318A85210C2C7A00A704B5 /* Main.storyboard */,
 			);
 			path = MORO;
+			sourceTree = "<group>";
+		};
+		EFD62904210CC175006C8403 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EF458546210C5EC000BBB03B /* TimeHeaderTableViewCell.swift */,
+				EF458548210C689C00BBB03B /* TimeMainListTableViewCell.swift */,
+				EF45854A210C6ED000BBB03B /* BlueberryImageView.swift */,
+				EF45854C210C6EDC00BBB03B /* BlueBerryLabelView.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		EFD62905210CC185006C8403 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EF45854E210C9FF200BBB03B /* WhiteImageView.swift */,
+				EF458550210C9FFA00BBB03B /* WhiteLabelView.swift */,
+				EF458552210CBEBB00BBB03B /* CustomPageControl.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		EFD62906210CC18D006C8403 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CB9E630B210C82E800A6C117 /* BorderTextField.swift */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 		F7CC5B74E90E8ECCAAB1A32C /* Pods */ = {
@@ -253,6 +283,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFD6290C210CCE73006C8403 /* rocketLottie.json in Resources */,
 				CB1B0714210C4E9C00378CAB /* NanumSquareRoundB.ttf in Resources */,
 				CB1B0715210C4E9C00378CAB /* NanumSquareRoundEB.ttf in Resources */,
 				CB1B0716210C4E9C00378CAB /* NanumSquareRoundL.ttf in Resources */,
@@ -297,6 +328,7 @@
 				"${PODS_ROOT}/Reveal-SDK/RevealServer-16/iOS/RevealServer.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 				"${BUILT_PRODUCTS_DIR}/UICKeyChainStore/UICKeyChainStore.framework",
+				"${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -305,6 +337,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RevealServer.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UICKeyChainStore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Lottie.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -322,6 +355,7 @@
 				EF458551210C9FFA00BBB03B /* WhiteLabelView.swift in Sources */,
 				EF458547210C5EC000BBB03B /* TimeHeaderTableViewCell.swift in Sources */,
 				EF45854F210C9FF200BBB03B /* WhiteImageView.swift in Sources */,
+				EFD62908210CC314006C8403 /* Notification+Utility.swift in Sources */,
 				EF45854B210C6ED000BBB03B /* BlueberryImageView.swift in Sources */,
 				CB1B070E210C3C7D00378CAB /* RoomListViewController.swift in Sources */,
 				CB1B071B210C77C800378CAB /* CreateRoomViewController.swift in Sources */,

@@ -26,7 +26,9 @@ class CreateRoomViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func done(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
+        dismiss(animated: true) {
+            NotificationCenter.default.post(name: .createRoom, object: nil, userInfo: nil)
+        }
     }
     
     @IBAction func viewDidTapped(_ sender: UITapGestureRecognizer) {
@@ -77,8 +79,7 @@ extension CreateRoomViewController {
                            options: .curveEaseOut,
                            animations: { self.view.frame = CGRect(x: 0, y: -50, width: self.view.frame.width, height: self.view.frame.height) },
                            completion: nil)
-        }
-        else if activeTextField == maxMemberTextField {
+        } else if activeTextField == maxMemberTextField {
             UIView.animate(withDuration: 0.5,
                            delay: 0,
                            usingSpringWithDamping: 1,
@@ -86,8 +87,7 @@ extension CreateRoomViewController {
                            options: .curveEaseOut,
                            animations: { self.view.frame = CGRect(x: 0, y: -80, width: self.view.frame.width, height: self.view.frame.height) },
                            completion: nil)
-        }
-        else if activeTextField == minLevelTextField {
+        } else if activeTextField == minLevelTextField {
             UIView.animate(withDuration: 0.5,
                            delay: 0,
                            usingSpringWithDamping: 1,
