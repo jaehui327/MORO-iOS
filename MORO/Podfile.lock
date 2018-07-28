@@ -2,7 +2,40 @@ PODS:
   - Alamofire (4.7.3)
   - FCUUID (1.3.1):
     - UICKeyChainStore (~> 2.1.0)
+  - Firebase/Core (5.4.1):
+    - Firebase/CoreOnly
+    - FirebaseAnalytics (= 5.0.1)
+  - Firebase/CoreOnly (5.4.1):
+    - FirebaseCore (= 5.0.6)
+  - Firebase/Messaging (5.4.1):
+    - Firebase/CoreOnly
+    - FirebaseMessaging (= 3.0.3)
+  - FirebaseAnalytics (5.0.1):
+    - FirebaseCore (~> 5.0)
+    - FirebaseInstanceID (~> 3.0)
+    - "GoogleToolboxForMac/NSData+zlib (~> 2.1)"
+    - nanopb (~> 0.3)
+  - FirebaseCore (5.0.6):
+    - "GoogleToolboxForMac/NSData+zlib (~> 2.1)"
+  - FirebaseInstanceID (3.1.1):
+    - FirebaseCore (~> 5.0)
+  - FirebaseMessaging (3.0.3):
+    - FirebaseCore (~> 5.0)
+    - FirebaseInstanceID (~> 3.0)
+    - GoogleToolboxForMac/Logger (~> 2.1)
+    - Protobuf (~> 3.1)
+  - GoogleToolboxForMac/Defines (2.1.4)
+  - GoogleToolboxForMac/Logger (2.1.4):
+    - GoogleToolboxForMac/Defines (= 2.1.4)
+  - "GoogleToolboxForMac/NSData+zlib (2.1.4)":
+    - GoogleToolboxForMac/Defines (= 2.1.4)
   - lottie-ios (2.5.0)
+  - nanopb (0.3.8):
+    - nanopb/decode (= 0.3.8)
+    - nanopb/encode (= 0.3.8)
+  - nanopb/decode (0.3.8)
+  - nanopb/encode (0.3.8)
+  - Protobuf (3.6.0)
   - Reveal-SDK (16)
   - SnapKit (4.0.0)
   - UICKeyChainStore (2.1.1)
@@ -10,6 +43,8 @@ PODS:
 DEPENDENCIES:
   - Alamofire
   - FCUUID
+  - Firebase/Core
+  - Firebase/Messaging
   - lottie-ios
   - Reveal-SDK
   - SnapKit
@@ -18,7 +53,15 @@ SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
     - FCUUID
+    - Firebase
+    - FirebaseAnalytics
+    - FirebaseCore
+    - FirebaseInstanceID
+    - FirebaseMessaging
+    - GoogleToolboxForMac
     - lottie-ios
+    - nanopb
+    - Protobuf
     - Reveal-SDK
     - SnapKit
     - UICKeyChainStore
@@ -26,11 +69,19 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
   FCUUID: bb054fc90cd7cd99320f9f6ff8e130fe607fba05
+  Firebase: 355bd535bfdacaa82a7fe8d9784115edefd6fc03
+  FirebaseAnalytics: b3628aea54c50464c32c393fb2ea032566e7ecc2
+  FirebaseCore: 4c28e3b9708ba48a765e76515f913a71596eb5dd
+  FirebaseInstanceID: f3f0657372592ecdfdfe2cac604a5a75758376a6
+  FirebaseMessaging: f43eb0c0e1da096e659de6f713038e74862a62cd
+  GoogleToolboxForMac: 91c824d21e85b31c2aae9bb011c5027c9b4e738f
   lottie-ios: d699fdee68d7b63e721d949388b015fef1aaa4ac
+  nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
+  Protobuf: 0fc0ad8bec688b2a3017a139953e01374fedbd5f
   Reveal-SDK: ed36bdbb3cbf90b94ae5da0dbcb3c7ae6738c51f
   SnapKit: a42d492c16e80209130a3379f73596c3454b7694
   UICKeyChainStore: 239558492fa260531a0774cfc611ea83a6eaff3a
 
-PODFILE CHECKSUM: cf585fb777d486d2bdabc54ab25fb7277687cd0b
+PODFILE CHECKSUM: 60a0bb4e8d621e5a99fd47e83a404f4a8753dd13
 
 COCOAPODS: 1.5.3

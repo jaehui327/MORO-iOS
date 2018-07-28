@@ -5,7 +5,9 @@ target 'MORO' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks 
   use_frameworks! 
   pod 'Alamofire' 
-  pod 'FCUUID' 
+  pod 'FCUUID'
+  pod 'Firebase/Core'
+  pod 'Firebase/Messaging'
   pod 'SnapKit' 
   pod 'Reveal-SDK', :configurations => ['Debug']
   pod 'lottie-ios'
