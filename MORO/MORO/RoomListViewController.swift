@@ -17,6 +17,13 @@ class RoomListViewController: UIViewController {
         return imageView
     }()
     
+    private var makeRoomButton: UIButton = {
+        let button: UIButton = UIButton()
+        button.setImage(#imageLiteral(resourceName: "floating"), for: .normal)
+        
+        return button
+    }()
+    
     private lazy var tableView: UITableView = {
         var tableView: UITableView = UITableView.init(frame: .zero, style: .plain)
         tableView.backgroundColor = .clear
@@ -42,6 +49,7 @@ class RoomListViewController: UIViewController {
     private func addSubViews() {
         view.addSubview(backgroundImageView)
         view.addSubview(tableView)
+        view.addSubview(makeRoomButton)
     }
     
     private func addConstraints() {
@@ -51,6 +59,11 @@ class RoomListViewController: UIViewController {
         
         tableView.snp.makeConstraints {
             $0.top.bottom.leading.trailing.equalToSuperview()
+        }
+        
+        makeRoomButton.snp.makeConstraints {
+            $0.bottom.equalToSuperview().offset(-30)
+            $0.trailing.equalToSuperview().offset(-30)
         }
     }
 }
