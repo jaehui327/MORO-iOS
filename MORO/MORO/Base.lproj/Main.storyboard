@@ -87,7 +87,7 @@
                                 </constraints>
                                 <color key="textColor" name="blueberry"/>
                                 <fontDescription key="fontDescription" name="NanumSquareRoundR" family="NanumSquareRound" pointSize="15"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="레벨" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hj9-T5-2BI" customClass="BorderTextField" customModule="MORO" customModuleProvider="target">
                                 <rect key="frame" x="159" y="379" width="73" height="27"/>
@@ -97,7 +97,7 @@
                                 </constraints>
                                 <color key="textColor" name="blueberry"/>
                                 <fontDescription key="fontDescription" name="NanumSquareRoundR" family="NanumSquareRound" pointSize="15"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lv" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lja-5a-exO">
                                 <rect key="frame" x="136" y="385" width="16" height="17"/>
