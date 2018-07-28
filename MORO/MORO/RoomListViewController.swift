@@ -17,13 +17,6 @@ class RoomListViewController: UIViewController {
         return refreshControl
     }()
     
-    private var backgroundImageView: UIImageView = {
-        let imageView: UIImageView = UIImageView()
-        imageView.image = #imageLiteral(resourceName: "backgroundShort")
-        
-        return imageView
-    }()
-    
     private lazy var makeRoomButton: UIButton = {
         let button: UIButton = UIButton()
         button.setImage(#imageLiteral(resourceName: "floating"), for: .normal)
@@ -44,7 +37,7 @@ class RoomListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        view.backgroundColor = .clear
         addSubViews()
         addConstraints()
     }
@@ -54,17 +47,12 @@ class RoomListViewController: UIViewController {
     }
     
     private func addSubViews() {
-        view.addSubview(backgroundImageView)
         view.addSubview(tableView)
         view.addSubview(makeRoomButton)
         tableView.addSubview(refreshControl)
     }
     
     private func addConstraints() {
-        backgroundImageView.snp.makeConstraints {
-            $0.top.bottom.leading.trailing.equalToSuperview()
-        }
-        
         tableView.snp.makeConstraints {
             $0.top.bottom.leading.trailing.equalToSuperview()
         }

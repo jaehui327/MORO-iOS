@@ -7,9 +7,18 @@
 //
 
 import UIKit
+import SnapKit
 
 class RootPageViewController: UIPageViewController {
     //MARK: properties
+    private var backgroundImageView: UIImageView = {
+        let imageView: UIImageView = UIImageView()
+        imageView.contentMode = .scaleToFill
+        imageView.image = #imageLiteral(resourceName: "BGFULL")
+        
+        return imageView
+    }()
+    
     private var pageControl: UIPageControl = UIPageControl()
     
     private var viewControllerList : [UIViewController] = {
@@ -23,10 +32,11 @@ class RootPageViewController: UIPageViewController {
     //MARK: life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+
         // Do any additional setup after loading the view.
         dataSource = self
         delegate = self
-        
+        setBackground()
         initPageViewController()
     }
     
@@ -35,6 +45,14 @@ class RootPageViewController: UIPageViewController {
     }
     
     //MARK: Methods
+    private func setBackground() {
+        view.addSubview(backgroundImageView)
+        
+        backgroundImageView.snp.makeConstraints {
+            $0.bottom.leading.trailing.equalToSuperview()
+        }
+        backgroundImageView.layer.zPosition = -100
+    }
     private func initPageViewController() {
         configurePageControl()
         

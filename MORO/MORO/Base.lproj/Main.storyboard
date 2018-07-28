@@ -157,9 +157,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BGFULL" translatesAutoresizingMaskIntoConstraints="NO" id="BOc-km-Pz6">
-                                <rect key="frame" x="0.0" y="-633" width="375" height="1300"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="출발 예정" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t6b-th-NnJ">
                                 <rect key="frame" x="137.5" y="136.5" width="101.5" height="42"/>
                                 <constraints>
@@ -266,26 +263,25 @@
                         <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="IxE-l0-LO5" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="40:333.5" id="0IZ-XE-8p1"/>
-                            <constraint firstItem="BOc-km-Pz6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="5Vm-0p-bgA"/>
-                            <constraint firstItem="SJQ-qm-g6f" firstAttribute="centerX" secondItem="BOc-km-Pz6" secondAttribute="centerX" id="7Fc-cZ-Xff"/>
-                            <constraint firstItem="BOc-km-Pz6" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="7gE-9e-nqA"/>
+                            <constraint firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="5Vm-0p-bgA"/>
+                            <constraint firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="7gE-9e-nqA"/>
                             <constraint firstItem="81p-Fp-7iO" firstAttribute="leading" secondItem="qWO-Jx-MK1" secondAttribute="trailing" constant="4" id="8MY-4E-Vib"/>
                             <constraint firstItem="0jB-Lk-0Tx" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="80:333.5" constant="5.5" id="Ah8-dl-Fvn"/>
                             <constraint firstItem="t6b-th-NnJ" firstAttribute="top" secondItem="0jB-Lk-0Tx" secondAttribute="firstBaseline" constant="10" id="Bd2-bQ-OmU"/>
-                            <constraint firstItem="BOc-km-Pz6" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottom" id="Ewc-N7-P2m"/>
+                            <constraint firstItem="0jB-Lk-0Tx" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="DUF-uy-hLP"/>
                             <constraint firstItem="WSX-NX-BmN" firstAttribute="leading" secondItem="4rO-mn-owa" secondAttribute="leading" id="JM6-LH-qdV"/>
-                            <constraint firstItem="0jB-Lk-0Tx" firstAttribute="centerX" secondItem="BOc-km-Pz6" secondAttribute="centerX" id="JOR-mq-feL"/>
+                            <constraint firstItem="t6b-th-NnJ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="MKG-mb-yEs"/>
+                            <constraint firstItem="nbN-Ds-IBw" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="NuQ-Dj-Yjn"/>
                             <constraint firstItem="nbN-Ds-IBw" firstAttribute="top" secondItem="SJQ-qm-g6f" secondAttribute="bottom" constant="20" id="T1M-tY-5c8"/>
                             <constraint firstItem="WSX-NX-BmN" firstAttribute="top" secondItem="4rO-mn-owa" secondAttribute="top" id="UOg-9l-vmw"/>
                             <constraint firstItem="WSX-NX-BmN" firstAttribute="width" secondItem="4rO-mn-owa" secondAttribute="width" id="VdS-10-wga"/>
                             <constraint firstItem="WSX-NX-BmN" firstAttribute="centerY" secondItem="81p-Fp-7iO" secondAttribute="centerY" id="bqR-B9-5xe"/>
-                            <constraint firstItem="nbN-Ds-IBw" firstAttribute="centerX" secondItem="BOc-km-Pz6" secondAttribute="centerX" id="cM2-CO-7at"/>
                             <constraint firstItem="qWO-Jx-MK1" firstAttribute="leading" secondItem="nbN-Ds-IBw" secondAttribute="leading" constant="8" id="d8B-LC-6Rd"/>
                             <constraint firstItem="SJQ-qm-g6f" firstAttribute="top" secondItem="t6b-th-NnJ" secondAttribute="bottom" constant="35" id="fTE-MA-wSS"/>
                             <constraint firstItem="81p-Fp-7iO" firstAttribute="trailing" secondItem="nbN-Ds-IBw" secondAttribute="trailing" constant="-8" id="g7a-So-chp"/>
+                            <constraint firstItem="SJQ-qm-g6f" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="hq6-2L-E85"/>
                             <constraint firstItem="bhG-Xx-NzA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="i9E-uD-tmS"/>
                             <constraint firstItem="WSX-NX-BmN" firstAttribute="trailing" secondItem="4rO-mn-owa" secondAttribute="trailing" id="iRk-fK-W7B"/>
-                            <constraint firstItem="t6b-th-NnJ" firstAttribute="centerX" secondItem="BOc-km-Pz6" secondAttribute="centerX" id="kSh-Gm-b4D"/>
                             <constraint firstItem="bhG-Xx-NzA" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="40:333.5" id="mDa-md-3T6"/>
                             <constraint firstItem="4rO-mn-owa" firstAttribute="centerY" secondItem="81p-Fp-7iO" secondAttribute="centerY" id="mbO-La-Rti"/>
                             <constraint firstItem="qWO-Jx-MK1" firstAttribute="centerY" secondItem="nbN-Ds-IBw" secondAttribute="centerY" id="mpt-rD-TIa"/>
@@ -343,7 +339,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="BGFULL" width="360" height="1300"/>
         <image name="Lv4" width="25" height="25"/>
         <image name="hPbg" width="203" height="29"/>
         <image name="hPgauge" width="148" height="13"/>
@@ -351,9 +346,6 @@
         <image name="rocketon" width="190" height="308"/>
         <namedColor name="Grape">
             <color red="0.29803921568627451" green="0.15294117647058825" blue="0.37647058823529411" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="blueberry">
-            <color red="0.33300000429153442" green="0.25099998712539673" blue="0.57599997520446777" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="blueberry">
             <color red="0.33300000429153442" green="0.25099998712539673" blue="0.57599997520446777" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
