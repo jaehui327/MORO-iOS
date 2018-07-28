@@ -11,4 +11,7 @@ class AlarmOffAlertViewController: UIViewController {
         
         offAlarmButton.layer.addBorder([.top], color: UIColor.lightGray, width: 0.5)
     }
+    @IBAction func dismissButton(_ sender: UIButton) {
+        dismiss(animated: true, completion: nil)
+    }
 }

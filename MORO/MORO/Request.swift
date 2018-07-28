@@ -10,6 +10,55 @@ import UIKit
 import Alamofire
 import FCUUID
 
+final class CreateRoomRequest: Requestable {
+    typealias ResponseType = EmptyModel
+    var alarmTime: String
+    var NumOfUsers: String
+    var roomName: String
+    var userRequirement: String
+    var tokenKey: String
+    var deviceNum: String
+    
+    init(alarmTime: String, NumOfUsers: String, roomName: String, userRequirement: String, tokenKey: String) {
+        self.alarmTime = alarmTime
+        self.NumOfUsers = NumOfUsers
+        self.roomName = roomName
+        self.userRequirement = userRequirement
+        self.tokenKey = tokenKey
+        self.deviceNum = FCUUID.uuidForDevice()
+    }
+    
+    var endpoint: String {
+        return "alarm"
+    }
+    
+    var method: Network.Method {
+        return .post
+    }
+    
+    var query: Network.QueryType {
+        return .path
+    }
+    
+    var parameters: [String: Any]? {
+        let parm = ["alarmTime": self.alarmTime, "NumOfUsers": self.NumOfUsers, "roomName": self.roomName, "userRequirement": self.userRequirement, "tokenKey": self.tokenKey, "deviceNum": self.deviceNum]
+        return parm
+    }
+    
+    var headers: [String: String]? {
+        return ["Content-Type": "application/json"]  // the request is JSON
+
+    }
+    
+    var timeout: TimeInterval {
+        return 30.0
+    }
+    
+    var cachePolicy: NSURLRequest.CachePolicy {
+        return .reloadIgnoringLocalAndRemoteCacheData
+    }
+}
+
 final class MainRequest: Requestable {
     typealias ResponseType = MainModel
     

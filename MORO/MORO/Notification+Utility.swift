@@ -10,4 +10,5 @@ import UIKit
 
 extension Notification.Name {
     static let createRoom = Notification.Name("createRoom")
+    static let alarm = Notification.Name("alarm")
 }

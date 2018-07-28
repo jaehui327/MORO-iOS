@@ -8,6 +8,9 @@
 
 import UIKit
 
+struct EmptyModel: Codable {
+}
+
 struct MainModel: Codable {
-    let level, alarmTime, numOfUsers, roomName, roomRequirement: String
+    let level, alarmTime, numOfUsers, roomName, roomRequirement, leftUsers, isSelected: String
 }

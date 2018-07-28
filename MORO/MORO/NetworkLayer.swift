@@ -106,6 +106,15 @@ extension Network {
             var components = URLComponents(url: url, resolvingAgainstBaseURL: true)!
             components.query = query
             request = URLRequest(url: components.url!, cachePolicy: req.cachePolicy, timeoutInterval: req.timeout)
+            
+            if let params = req.parameters {
+                do {
+                    let body = try JSONSerialization.data(withJSONObject: params, options: [])
+                    request!.httpBody = body
+                } catch {
+                    assertionFailure("Error : while attemping to serialize the data for preparing httpBody \(error)")
+                }
+            }
         }
         
         request!.allHTTPHeaderFields = req.headers

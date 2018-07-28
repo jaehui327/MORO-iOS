@@ -21,7 +21,7 @@
         <!--Launch Rocket Alert View Controller-->
         <scene sceneID="vua-5k-Euw">
             <objects>
-                <viewController id="hUh-4T-mWp" customClass="LaunchRocketAlertViewController" customModule="MORO" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="overCurrentContext" id="hUh-4T-mWp" customClass="LaunchRocketAlertViewController" customModule="MORO" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xmm-87-orN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -173,7 +173,7 @@
         <!--Alarm Off Alert View Controller-->
         <scene sceneID="vvd-En-gzF">
             <objects>
-                <viewController id="guj-Rh-3dc" customClass="AlarmOffAlertViewController" customModule="MORO" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AlarmOffAlertViewController" modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="guj-Rh-3dc" customClass="AlarmOffAlertViewController" customModule="MORO" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bZu-ok-AgY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -203,6 +203,9 @@
                                         <state key="normal" title="알람끄기">
                                             <color key="titleColor" name="grapePurple"/>
                                         </state>
+                                        <connections>
+                                            <action selector="dismissButton:" destination="guj-Rh-3dc" eventType="touchUpInside" id="XiW-4Q-bsZ"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

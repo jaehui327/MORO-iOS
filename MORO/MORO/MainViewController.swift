@@ -41,6 +41,8 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        NotificationCenter.default.addObserver(self, selector: #selector(refresh), name: .alarm, object: nil)
+        
         Network.request(req: MainRequest()) { [weak self] result in
             switch result {
             case .success(let result):
@@ -55,10 +57,15 @@ class MainViewController: UIViewController {
         }
         view.backgroundColor = .clear
     }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self, name: .alarm, object: nil)
+    }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         delegate?.mainViewWillAppear()
+        refresh()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -86,12 +93,22 @@ class MainViewController: UIViewController {
         animationView.loopAnimation = true
     }
     
-    private func refresh() {
+    @objc private func refresh() {
         guard let model = model else {
             return
         }
-        
-        if isEntered(model: model) {
+        if isAlarmTime(model: model) {
+            if model.isSelected == "true" {
+                let storyboard = UIStoryboard(name: "AlertStoryboard", bundle: nil)
+                let alarmOffAlertViewController = storyboard.instantiateViewController(withIdentifier: "AlarmOffAlertViewController")
+                present(alarmOffAlertViewController, animated: true, completion: nil)
+            }
+            알람시간.text = "\(model.leftUsers)명"
+            출발예정.text = "남았습니다."
+            엠티라벨.text = ""
+            rocketImageView.image = #imageLiteral(resourceName: "rocketon")
+            setAnimateView()
+        } else if isEntered(model: model) {
             알람시간.text = model.alarmTime
             출발예정.text = "출발예정"
             rocketImageView.image = #imageLiteral(resourceName: "rocketon")
@@ -106,9 +123,20 @@ class MainViewController: UIViewController {
             
             rocketImageView.image =  #imageLiteral(resourceName: "rocketoff")
         }
-        
-        
-        
+    }
+    
+    private func isAlarmTime(model: MainModel) -> Bool {
+        if model.alarmTime == "" {
+            return false
+        }
+        let date = Date()
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        guard let alarmDate = formatter.date(from: model.alarmTime) else { return false }
+        if date.timeIntervalSince1970 - alarmDate.timeIntervalSince1970 > 0 {
+            return true
+        }
+        return false
     }
     
     private func isEntered(model: MainModel) -> Bool {

@@ -26,8 +26,25 @@ class CreateRoomViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func done(_ sender: Any) {
-        dismiss(animated: true) {
-            NotificationCenter.default.post(name: .createRoom, object: nil, userInfo: nil)
+        Network.request(req: CreateRoomRequest(alarmTime: "2018-08-09 01:19:19", NumOfUsers: maxMemberTextField.text!, roomName: roomNameTextField.text!, userRequirement: minLevelTextField.text!, tokenKey: "abcde")) { [weak self] result in
+            switch result {
+            case .success(_):
+                self?.dismiss(animated: true) {
+                    NotificationCenter.default.post(name: .createRoom, object: nil, userInfo: nil)
+                }
+            case .cancel(let cancelError):
+                print(cancelError!)
+                
+                self?.dismiss(animated: true) {
+                    NotificationCenter.default.post(name: .createRoom, object: nil, userInfo: nil)
+                }
+            case .failure(let error):
+                print(error!)
+                
+                self?.dismiss(animated: true) {
+                    NotificationCenter.default.post(name: .createRoom, object: nil, userInfo: nil)
+                }
+            }
         }
     }
     
