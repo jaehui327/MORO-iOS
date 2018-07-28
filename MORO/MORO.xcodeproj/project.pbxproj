@@ -27,6 +27,8 @@
 		EF458549210C689C00BBB03B /* TimeMainListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF458548210C689C00BBB03B /* TimeMainListTableViewCell.swift */; };
 		EF45854B210C6ED000BBB03B /* BlueberryImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF45854A210C6ED000BBB03B /* BlueberryImageView.swift */; };
 		EF45854D210C6EDC00BBB03B /* BlueBerryLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF45854C210C6EDC00BBB03B /* BlueBerryLabelView.swift */; };
+		EF45854F210C9FF200BBB03B /* WhiteImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF45854E210C9FF200BBB03B /* WhiteImageView.swift */; };
+		EF458551210C9FFA00BBB03B /* WhiteLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF458550210C9FFA00BBB03B /* WhiteLabelView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +56,8 @@
 		EF458548210C689C00BBB03B /* TimeMainListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeMainListTableViewCell.swift; sourceTree = "<group>"; };
 		EF45854A210C6ED000BBB03B /* BlueberryImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueberryImageView.swift; sourceTree = "<group>"; };
 		EF45854C210C6EDC00BBB03B /* BlueBerryLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueBerryLabelView.swift; sourceTree = "<group>"; };
+		EF45854E210C9FF200BBB03B /* WhiteImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiteImageView.swift; sourceTree = "<group>"; };
+		EF458550210C9FFA00BBB03B /* WhiteLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiteLabelView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +100,8 @@
 			children = (
 				CB1B0709210C3C1A00378CAB /* RootPageViewController.swift */,
 				CB1B070B210C3C5A00378CAB /* MainViewController.swift */,
+				EF45854E210C9FF200BBB03B /* WhiteImageView.swift */,
+				EF458550210C9FFA00BBB03B /* WhiteLabelView.swift */,
 			);
 			name = Main;
 			sourceTree = "<group>";
@@ -304,7 +310,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB1B070A210C3C1A00378CAB /* RootPageViewController.swift in Sources */,
+				EF458551210C9FFA00BBB03B /* WhiteLabelView.swift in Sources */,
 				EF458547210C5EC000BBB03B /* TimeHeaderTableViewCell.swift in Sources */,
+				EF45854F210C9FF200BBB03B /* WhiteImageView.swift in Sources */,
 				EF45854B210C6ED000BBB03B /* BlueberryImageView.swift in Sources */,
 				CB1B070E210C3C7D00378CAB /* RoomListViewController.swift in Sources */,
 				CB1B071B210C77C800378CAB /* CreateRoomViewController.swift in Sources */,

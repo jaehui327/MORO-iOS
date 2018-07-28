@@ -54,7 +54,8 @@ class RoomListViewController: UIViewController {
     
     private func addConstraints() {
         tableView.snp.makeConstraints {
-            $0.top.bottom.leading.trailing.equalToSuperview()
+            $0.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(60)
+            $0.bottom.leading.trailing.equalToSuperview()
         }
         
         makeRoomButton.snp.makeConstraints {

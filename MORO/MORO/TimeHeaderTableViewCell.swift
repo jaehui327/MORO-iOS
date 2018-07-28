@@ -27,6 +27,7 @@ class TimeHeaderTableViewCell: UITableViewCell {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
     
         backgroundColor = .clear
+        selectionStyle = .none
         addSubViews()
         addConstraints()
     }

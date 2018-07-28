@@ -11,6 +11,16 @@ import SnapKit
 
 class RootPageViewController: UIPageViewController {
     //MARK: properties
+    private var roomView: WhiteLabelView = {
+        let view: WhiteLabelView = WhiteLabelView()
+        return view
+    }()
+    
+    private var levelView: WhiteImageView = {
+        let view: WhiteImageView = WhiteImageView()
+        return view
+    }()
+    
     private var backgroundImageView: UIImageView = {
         let imageView: UIImageView = UIImageView()
         imageView.contentMode = .scaleToFill
@@ -18,6 +28,8 @@ class RootPageViewController: UIPageViewController {
         
         return imageView
     }()
+    
+    private var scrollView: UIScrollView?
     
     private var pageControl: UIPageControl = UIPageControl()
     
@@ -36,6 +48,9 @@ class RootPageViewController: UIPageViewController {
         // Do any additional setup after loading the view.
         dataSource = self
         delegate = self
+        
+        addSubViews()
+        addConstraints()
         setBackground()
         initPageViewController()
     }
@@ -45,6 +60,24 @@ class RootPageViewController: UIPageViewController {
     }
     
     //MARK: Methods
+    private func addSubViews() {
+        view.addSubview(levelView)
+        view.addSubview(roomView)
+    }
+    
+    private func addConstraints() {
+        levelView.snp.makeConstraints {
+            $0.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(15)
+            $0.leading.equalToSuperview().offset(20)
+        }
+        
+        roomView.snp.makeConstraints {
+            $0.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(15)
+            $0.trailing.equalToSuperview().offset(20)
+            $0.leading.greaterThanOrEqualTo(levelView.snp.trailing).offset(35)
+        }
+    }
+    
     private func setBackground() {
         view.addSubview(backgroundImageView)
         
@@ -77,6 +110,17 @@ extension RootPageViewController: UIPageViewControllerDelegate {
     func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
         let pageContentViewController = pageViewController.viewControllers![0]
         pageControl.currentPage = viewControllerList.index(of: pageContentViewController)!
+        
+        UIView.animate(withDuration: 0.5) { [weak self] in
+            if let index = self?.viewControllerList.index(of: pageContentViewController) {
+                if index == 0 {
+                    self?.roomView.alpha = 1
+                } else {
+                    self?.roomView.alpha = 0
+                }
+                self?.view.layoutIfNeeded()
+            }
+        }
     }
 }
 
@@ -112,6 +156,10 @@ extension RootPageViewController: UIPageViewControllerDataSource {
         }
         guard viewControllerList.count > nextIndex else {
             return nil
+        }
+        UIView.animate(withDuration: 0.5) { [weak self] in
+            self?.roomView.alpha = 0
+            self?.view.layoutIfNeeded()
         }
         return viewControllerList[nextIndex]
     }

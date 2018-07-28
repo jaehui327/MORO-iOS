@@ -12,8 +12,6 @@ class MainViewController: UIViewController {
     //MARK: IBOutlet
     @IBOutlet weak var HPGuage: UIImageView!
     @IBOutlet weak var HPHideLeadingConstraint: NSLayoutConstraint!
-    @IBOutlet weak var levelView: UIView!
-    @IBOutlet weak var roomInfoView: UIView!
     
     //MARK: properties
     
@@ -28,9 +26,4 @@ class MainViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
-    override func viewWillLayoutSubviews() {
-        levelView.layer.cornerRadius = levelView.frame.height / 2
-        roomInfoView.layer.cornerRadius = roomInfoView.frame.height / 2
-    }
-    //MARK: Methods
 }

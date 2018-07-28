@@ -65,6 +65,7 @@ class TimeMainListTableViewCell: UITableViewCell {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
         backgroundColor = .clear
+        selectionStyle = .none
         addSubViews()
         addConstraints()
     }
@@ -111,6 +112,7 @@ class TimeMainListTableViewCell: UITableViewCell {
             $0.leading.equalTo(시간라벨.snp.trailing).offset(19)
             $0.trailing.lessThanOrEqualTo(arrowImageView.snp.leading).offset(-4)
         }
+        
         제목라벨.setContentCompressionResistancePriority(UILayoutPriority(rawValue: 250), for: .horizontal)
         
         사람수뷰.snp.makeConstraints {
