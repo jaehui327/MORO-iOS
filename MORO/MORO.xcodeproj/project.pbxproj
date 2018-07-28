@@ -22,6 +22,10 @@
 		CB318A87210C2C7A00A704B5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB318A85210C2C7A00A704B5 /* Main.storyboard */; };
 		CB318A89210C2C7D00A704B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB318A88210C2C7D00A704B5 /* Assets.xcassets */; };
 		CB318A8C210C2C7D00A704B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB318A8A210C2C7D00A704B5 /* LaunchScreen.storyboard */; };
+		EF458547210C5EC000BBB03B /* TimeHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF458546210C5EC000BBB03B /* TimeHeaderTableViewCell.swift */; };
+		EF458549210C689C00BBB03B /* TimeMainListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF458548210C689C00BBB03B /* TimeMainListTableViewCell.swift */; };
+		EF45854B210C6ED000BBB03B /* BlueberryImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF45854A210C6ED000BBB03B /* BlueberryImageView.swift */; };
+		EF45854D210C6EDC00BBB03B /* BlueBerryLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF45854C210C6EDC00BBB03B /* BlueBerryLabelView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +48,10 @@
 		CB318A88210C2C7D00A704B5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CB318A8B210C2C7D00A704B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CB318A8D210C2C7D00A704B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF458546210C5EC000BBB03B /* TimeHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeHeaderTableViewCell.swift; sourceTree = "<group>"; };
+		EF458548210C689C00BBB03B /* TimeMainListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeMainListTableViewCell.swift; sourceTree = "<group>"; };
+		EF45854A210C6ED000BBB03B /* BlueberryImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueberryImageView.swift; sourceTree = "<group>"; };
+		EF45854C210C6EDC00BBB03B /* BlueBerryLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueBerryLabelView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +110,10 @@
 				CB318A8D210C2C7D00A704B5 /* Info.plist */,
 				03B9FEF3210C3B5100A8FF45 /* JoinAlertViewController.swift */,
 				03B9FEF5210C3D1E00A8FF45 /* AlertStoryboard.storyboard */,
+				EF458546210C5EC000BBB03B /* TimeHeaderTableViewCell.swift */,
+				EF458548210C689C00BBB03B /* TimeMainListTableViewCell.swift */,
+				EF45854A210C6ED000BBB03B /* BlueberryImageView.swift */,
+				EF45854C210C6EDC00BBB03B /* BlueBerryLabelView.swift */,
 			);
 			path = MORO;
 			sourceTree = "<group>";
@@ -224,12 +236,16 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-MORO/Pods-MORO-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/FCUUID/FCUUID.framework",
+				"${PODS_ROOT}/Reveal-SDK/RevealServer-16/iOS/RevealServer.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 				"${BUILT_PRODUCTS_DIR}/UICKeyChainStore/UICKeyChainStore.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FCUUID.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RevealServer.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UICKeyChainStore.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -245,10 +261,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB1B070A210C3C1A00378CAB /* RootPageViewController.swift in Sources */,
+				EF458547210C5EC000BBB03B /* TimeHeaderTableViewCell.swift in Sources */,
 				CB318A84210C2C7A00A704B5 /* ViewController.swift in Sources */,
+				EF45854B210C6ED000BBB03B /* BlueberryImageView.swift in Sources */,
 				CB1B070E210C3C7D00378CAB /* RoomListViewController.swift in Sources */,
 				CB318A82210C2C7A00A704B5 /* AppDelegate.swift in Sources */,
+				EF458549210C689C00BBB03B /* TimeMainListTableViewCell.swift in Sources */,
 				03B9FEF4210C3B5100A8FF45 /* JoinAlertViewController.swift in Sources */,
+				EF45854D210C6EDC00BBB03B /* BlueBerryLabelView.swift in Sources */,
 				CB1B070C210C3C5A00378CAB /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -398,10 +418,7 @@
 				DEVELOPMENT_TEAM = TA757FA6NR;
 				INFOPLIST_FILE = MORO/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = kr.unithon.7th.MORO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -418,10 +435,7 @@
 				DEVELOPMENT_TEAM = TA757FA6NR;
 				INFOPLIST_FILE = MORO/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = kr.unithon.7th.MORO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
