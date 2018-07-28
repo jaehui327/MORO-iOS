@@ -11,13 +11,37 @@ import UserNotifications
 import Firebase
 import FirebaseMessaging
 import FirebaseInstanceID
+import AVFoundation
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
     var window: UIWindow?
     let gcmMessageIDKey = "gcm.message_id"
 
+    var player: AVAudioPlayer?
+    
+    func playSound() {
+        
+        guard let asset = NSDataAsset(name: "sound") else { return }
+        do {
+            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
+            try AVAudioSession.sharedInstance().setActive(true)
+            
+            
+            
+            /* The following line is required for the player to work on iOS 11. Change the file type accordingly*/
+            player = try AVAudioPlayer(data: asset.data, fileTypeHint: "mp3")
+            /* iOS 10 and earlier require the following line:
+             player = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileTypeMPEGLayer3) */
+            
+            guard let player = player else { return }
+            
+            player.play()
+            
+        } catch let error {
+            print(error.localizedDescription)
+        }
+    }
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         FirebaseApp.configure()
@@ -83,6 +107,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if let messageID = userInfo[gcmMessageIDKey] {
             print("Message ID: \(messageID)")
         }
+        playSound()
+        NotificationCenter.default.post(name: .alarm, object: nil, userInfo: nil)
         
         // Print full message.
         print(userInfo)
@@ -99,6 +125,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if let messageID = userInfo[gcmMessageIDKey] {
             print("Message ID: \(messageID)")
         }
+        playSound()
+        NotificationCenter.default.post(name: .alarm, object: nil, userInfo: nil)
         
         // Print full message.
         print(userInfo)
@@ -134,6 +162,8 @@ extension AppDelegate : UNUserNotificationCenterDelegate {
         
         // Print full message.
         print(userInfo)
+        playSound()
+        NotificationCenter.default.post(name: .alarm, object: nil, userInfo: nil)
         
         // Change this to your preferred presentation option
         completionHandler([])
@@ -150,6 +180,8 @@ extension AppDelegate : UNUserNotificationCenterDelegate {
         
         // Print full message.
         print(userInfo)
+        playSound()
+        NotificationCenter.default.post(name: .alarm, object: nil, userInfo: nil)
         
         completionHandler()
     }
@@ -160,6 +192,7 @@ extension AppDelegate : MessagingDelegate {
     // [START refresh_token]
     func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String) {
         print("Firebase registration token: \(fcmToken)")
+        UserDefaults.standard.set(fcmToken, forKey: "token")
         
         // TODO: If necessary send token to application server.
         // Note: This callback is fired at each app startup and whenever a new token is generated.

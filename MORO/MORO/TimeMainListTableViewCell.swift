@@ -74,6 +74,12 @@ class TimeMainListTableViewCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        
+        alpha = 1
+    }
+    
     private func addSubViews() {
         addSubview(backgroundCardView)
         backgroundCardView.addSubview(오전오후라벨)
@@ -130,6 +136,17 @@ class TimeMainListTableViewCell: UITableViewCell {
             $0.trailing.equalToSuperview().offset(-12)
             $0.centerY.equalToSuperview()
         }
+    }
+    
+    func setData(model: String) {
+        if model == "" {
+            setAlpha()
+        }
+    }
+    
+    private func setAlpha() {
+        alpha = 0.5
+        setNeedsLayout()
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {

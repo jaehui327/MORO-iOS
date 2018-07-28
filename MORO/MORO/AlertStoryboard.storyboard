@@ -21,7 +21,7 @@
         <!--Launch Rocket Alert View Controller-->
         <scene sceneID="vua-5k-Euw">
             <objects>
-                <viewController modalPresentationStyle="overCurrentContext" id="hUh-4T-mWp" customClass="LaunchRocketAlertViewController" customModule="MORO" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LaunchRocketAlertViewController" modalPresentationStyle="overCurrentContext" id="hUh-4T-mWp" customClass="LaunchRocketAlertViewController" customModule="MORO" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xmm-87-orN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -44,6 +44,9 @@
                                         <state key="normal" title="확인">
                                             <color key="titleColor" name="blueberry"/>
                                         </state>
+                                        <connections>
+                                            <action selector="doneButton:" destination="hUh-4T-mWp" eventType="touchUpInside" id="get-q5-T57"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

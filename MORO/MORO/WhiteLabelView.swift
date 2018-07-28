@@ -13,7 +13,7 @@ class WhiteLabelView: UIView {
         let label: UILabel = UILabel()
         label.font = UIFont.init(name: "NanumSquareRoundR", size: 15)
         label.textColor = #colorLiteral(red: 0.3330000043, green: 0.2509999871, blue: 0.5759999752, alpha: 1)
-        label.text = "꼭 일어나자!! 아자아자아자아자"
+        label.text = " "
         return label
     }()
     
@@ -21,7 +21,7 @@ class WhiteLabelView: UIView {
         let label: UILabel = UILabel()
         label.font = UIFont.init(name: "NanumSquareRoundR", size: 15)
         label.textColor = #colorLiteral(red: 0.3330000043, green: 0.2509999871, blue: 0.5759999752, alpha: 1)
-        label.text = "Lv.3~5"
+        label.text = " "
         return label
     }()
     

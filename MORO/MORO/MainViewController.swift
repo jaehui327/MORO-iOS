@@ -41,6 +41,7 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setAnimateView()
         NotificationCenter.default.addObserver(self, selector: #selector(refresh), name: .alarm, object: nil)
         
         Network.request(req: MainRequest()) { [weak self] result in
@@ -80,7 +81,6 @@ class MainViewController: UIViewController {
     private func setAnimateView() {
         view.addSubview(animationView)
         view.addSubview(rocketView)
-        
         rocketView.snp.makeConstraints {
             $0.top.bottom.leading.trailing.equalTo(rocketImageView)
         }
@@ -89,6 +89,7 @@ class MainViewController: UIViewController {
             $0.top.equalTo(rocketView.snp.bottom).offset(-10)
             $0.leading.trailing.equalTo(rocketView)
         }
+        rocketView.alpha = 0
         animationView.alpha = 0
         animationView.loopAnimation = true
     }
@@ -97,8 +98,9 @@ class MainViewController: UIViewController {
         guard let model = model else {
             return
         }
+        print(model)
         if isAlarmTime(model: model) {
-            if model.isSelected == "true" {
+            if model.isSelected == "false" {
                 let storyboard = UIStoryboard(name: "AlertStoryboard", bundle: nil)
                 let alarmOffAlertViewController = storyboard.instantiateViewController(withIdentifier: "AlarmOffAlertViewController")
                 present(alarmOffAlertViewController, animated: true, completion: nil)
@@ -107,7 +109,10 @@ class MainViewController: UIViewController {
             출발예정.text = "남았습니다."
             엠티라벨.text = ""
             rocketImageView.image = #imageLiteral(resourceName: "rocketon")
-            setAnimateView()
+            
+            if model.leftUsers == "0" {
+                playAnimate()
+            }
         } else if isEntered(model: model) {
             알람시간.text = model.alarmTime
             출발예정.text = "출발예정"
@@ -131,6 +136,8 @@ class MainViewController: UIViewController {
         }
         let date = Date()
         let formatter = DateFormatter()
+        formatter.locale = Locale(identifier: "ko_kr")
+        formatter.timeZone = TimeZone(abbreviation: "KST")
         formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         guard let alarmDate = formatter.date(from: model.alarmTime) else { return false }
         if date.timeIntervalSince1970 - alarmDate.timeIntervalSince1970 > 0 {
@@ -149,6 +156,7 @@ class MainViewController: UIViewController {
     @objc private func playAnimate() {
         animationView.play()
         
+        rocketView.alpha = 1
         rocketImageView.alpha = 0
         rocketView.snp.remakeConstraints {
             let offset = -(rocketImageView.frame.height * 3)
@@ -167,12 +175,17 @@ class MainViewController: UIViewController {
         }) { [weak self] _ in
             self?.animationView.stop()
             self?.rocketImageView.alpha = 1
+            self?.rocketImageView.image = #imageLiteral(resourceName: "rocketoff")
             self?.rocketView.snp.remakeConstraints {
                 if let `self` = self {
                     $0.top.bottom.leading.trailing.equalTo(self.rocketImageView)
                 }
             }
             self?.delegate?.completeRocketlauncher()
+            
+            let storyboard = UIStoryboard(name: "AlertStoryboard", bundle: nil)
+            let launchRocketAlertViewController = storyboard.instantiateViewController(withIdentifier: "LaunchRocketAlertViewController")
+            self?.present(launchRocketAlertViewController, animated: true, completion: nil)
         }
     }
 }

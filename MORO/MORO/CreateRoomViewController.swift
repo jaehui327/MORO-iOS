@@ -2,6 +2,7 @@ import UIKit
 
 class CreateRoomViewController: UIViewController, UITextFieldDelegate {
     //MARK: IBOutlet
+    @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var roomNameTextField: UITextField!
     @IBOutlet weak var maxMemberTextField: UITextField!
     @IBOutlet weak var minLevelTextField: UITextField!
@@ -26,7 +27,13 @@ class CreateRoomViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func done(_ sender: Any) {
-        Network.request(req: CreateRoomRequest(alarmTime: "2018-08-09 01:19:19", NumOfUsers: maxMemberTextField.text!, roomName: roomNameTextField.text!, userRequirement: minLevelTextField.text!, tokenKey: "abcde")) { [weak self] result in
+        let date = datePicker.date
+        let formatter = DateFormatter()
+        formatter.locale = Locale(identifier: "ko_kr")
+        formatter.timeZone = TimeZone(abbreviation: "KST")
+        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        let stringDate = formatter.string(from: date)
+        Network.request(req: CreateRoomRequest(alarmTime: stringDate, NumOfUsers: maxMemberTextField.text!, roomName: roomNameTextField.text!, userRequirement: minLevelTextField.text!, tokenKey: UserDefaults.standard.value(forKey: "token") as! String)) { [weak self] result in
             switch result {
             case .success(_):
                 self?.dismiss(animated: true) {
