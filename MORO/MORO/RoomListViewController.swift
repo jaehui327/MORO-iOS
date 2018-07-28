@@ -17,10 +17,10 @@ class RoomListViewController: UIViewController {
         return imageView
     }()
     
-    private var makeRoomButton: UIButton = {
+    private lazy var makeRoomButton: UIButton = {
         let button: UIButton = UIButton()
         button.setImage(#imageLiteral(resourceName: "floating"), for: .normal)
-        
+        button.addTarget(self, action: #selector(방만들기), for: .touchUpInside)
         return button
     }()
     
@@ -65,6 +65,12 @@ class RoomListViewController: UIViewController {
             $0.bottom.equalToSuperview().offset(-30)
             $0.trailing.equalToSuperview().offset(-30)
         }
+    }
+    
+    @objc private func 방만들기() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let createRoomViewController = storyboard.instantiateViewController(withIdentifier: "CreateRoomViewController")
+        present(createRoomViewController, animated: true, completion: nil)
     }
 }
 

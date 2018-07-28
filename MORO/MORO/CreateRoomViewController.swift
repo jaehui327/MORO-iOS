@@ -10,5 +10,12 @@ class CreateRoomViewController: UIViewController {
         super.viewDidLoad()
         
     }
-
+    @IBAction func cancel(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func done(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
 }

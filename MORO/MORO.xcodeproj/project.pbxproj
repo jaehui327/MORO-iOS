@@ -19,15 +19,14 @@
 		CB1B0717210C4E9C00378CAB /* NanumSquareRoundR.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CB1B0710210C4CEA00378CAB /* NanumSquareRoundR.ttf */; };
 		CB1B071B210C77C800378CAB /* CreateRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1B071A210C77C800378CAB /* CreateRoomViewController.swift */; };
 		CB318A82210C2C7A00A704B5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB318A81210C2C7A00A704B5 /* AppDelegate.swift */; };
-		CB318A84210C2C7A00A704B5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB318A83210C2C7A00A704B5 /* ViewController.swift */; };
 		CB318A87210C2C7A00A704B5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB318A85210C2C7A00A704B5 /* Main.storyboard */; };
 		CB318A89210C2C7D00A704B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB318A88210C2C7D00A704B5 /* Assets.xcassets */; };
 		CB318A8C210C2C7D00A704B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB318A8A210C2C7D00A704B5 /* LaunchScreen.storyboard */; };
+		CB9E630C210C82E800A6C117 /* BorderTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9E630B210C82E800A6C117 /* BorderTextField.swift */; };
 		EF458547210C5EC000BBB03B /* TimeHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF458546210C5EC000BBB03B /* TimeHeaderTableViewCell.swift */; };
 		EF458549210C689C00BBB03B /* TimeMainListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF458548210C689C00BBB03B /* TimeMainListTableViewCell.swift */; };
 		EF45854B210C6ED000BBB03B /* BlueberryImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF45854A210C6ED000BBB03B /* BlueberryImageView.swift */; };
 		EF45854D210C6EDC00BBB03B /* BlueBerryLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF45854C210C6EDC00BBB03B /* BlueBerryLabelView.swift */; };
-		CB9E630C210C82E800A6C117 /* BorderTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9E630B210C82E800A6C117 /* BorderTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,16 +45,15 @@
 		CB1B071A210C77C800378CAB /* CreateRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRoomViewController.swift; sourceTree = "<group>"; };
 		CB318A7E210C2C7A00A704B5 /* MORO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MORO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB318A81210C2C7A00A704B5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CB318A83210C2C7A00A704B5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CB318A86210C2C7A00A704B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CB318A88210C2C7D00A704B5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CB318A8B210C2C7D00A704B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CB318A8D210C2C7D00A704B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CB9E630B210C82E800A6C117 /* BorderTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderTextField.swift; sourceTree = "<group>"; };
 		EF458546210C5EC000BBB03B /* TimeHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeHeaderTableViewCell.swift; sourceTree = "<group>"; };
 		EF458548210C689C00BBB03B /* TimeMainListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeMainListTableViewCell.swift; sourceTree = "<group>"; };
 		EF45854A210C6ED000BBB03B /* BlueberryImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueberryImageView.swift; sourceTree = "<group>"; };
 		EF45854C210C6EDC00BBB03B /* BlueBerryLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueBerryLabelView.swift; sourceTree = "<group>"; };
-		CB9E630B210C82E800A6C117 /* BorderTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +79,57 @@
 			path = font;
 			sourceTree = "<group>";
 		};
+		CB1D31DA210C8BB5005FBD54 /* supportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				CB1B070F210C4CD200378CAB /* font */,
+				CB318A88210C2C7D00A704B5 /* Assets.xcassets */,
+				CB318A8A210C2C7D00A704B5 /* LaunchScreen.storyboard */,
+				CB318A8D210C2C7D00A704B5 /* Info.plist */,
+				CB318A81210C2C7A00A704B5 /* AppDelegate.swift */,
+			);
+			name = supportingFiles;
+			sourceTree = "<group>";
+		};
+		CB311FA5210C8C1B00EE61ED /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				CB1B0709210C3C1A00378CAB /* RootPageViewController.swift */,
+				CB1B070B210C3C5A00378CAB /* MainViewController.swift */,
+			);
+			name = Main;
+			sourceTree = "<group>";
+		};
+		CB311FA6210C8C3200EE61ED /* List */ = {
+			isa = PBXGroup;
+			children = (
+				CB1B070D210C3C7D00378CAB /* RoomListViewController.swift */,
+				EF458546210C5EC000BBB03B /* TimeHeaderTableViewCell.swift */,
+				EF458548210C689C00BBB03B /* TimeMainListTableViewCell.swift */,
+				EF45854A210C6ED000BBB03B /* BlueberryImageView.swift */,
+				EF45854C210C6EDC00BBB03B /* BlueBerryLabelView.swift */,
+			);
+			name = List;
+			sourceTree = "<group>";
+		};
+		CB311FA7210C8C5100EE61ED /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				03B9FEF3210C3B5100A8FF45 /* JoinAlertViewController.swift */,
+				03B9FEF5210C3D1E00A8FF45 /* AlertStoryboard.storyboard */,
+			);
+			name = Alert;
+			sourceTree = "<group>";
+		};
+		CB311FA9210C8C7700EE61ED /* CreateRoom */ = {
+			isa = PBXGroup;
+			children = (
+				CB1B071A210C77C800378CAB /* CreateRoomViewController.swift */,
+				CB9E630B210C82E800A6C117 /* BorderTextField.swift */,
+			);
+			name = CreateRoom;
+			sourceTree = "<group>";
+		};
 		CB318A75210C2C7A00A704B5 = {
 			isa = PBXGroup;
 			children = (
@@ -102,24 +151,12 @@
 		CB318A80210C2C7A00A704B5 /* MORO */ = {
 			isa = PBXGroup;
 			children = (
-				CB1B070F210C4CD200378CAB /* font */,
-				CB318A81210C2C7A00A704B5 /* AppDelegate.swift */,
-				CB318A83210C2C7A00A704B5 /* ViewController.swift */,
-				CB1B0709210C3C1A00378CAB /* RootPageViewController.swift */,
-				CB1B070B210C3C5A00378CAB /* MainViewController.swift */,
-				CB1B070D210C3C7D00378CAB /* RoomListViewController.swift */,
-				CB1B071A210C77C800378CAB /* CreateRoomViewController.swift */,
-				CB9E630B210C82E800A6C117 /* BorderTextField.swift */,
+				CB311FA7210C8C5100EE61ED /* Alert */,
+				CB311FA6210C8C3200EE61ED /* List */,
+				CB311FA5210C8C1B00EE61ED /* Main */,
+				CB1D31DA210C8BB5005FBD54 /* supportingFiles */,
+				CB311FA9210C8C7700EE61ED /* CreateRoom */,
 				CB318A85210C2C7A00A704B5 /* Main.storyboard */,
-				CB318A88210C2C7D00A704B5 /* Assets.xcassets */,
-				CB318A8A210C2C7D00A704B5 /* LaunchScreen.storyboard */,
-				CB318A8D210C2C7D00A704B5 /* Info.plist */,
-				03B9FEF3210C3B5100A8FF45 /* JoinAlertViewController.swift */,
-				03B9FEF5210C3D1E00A8FF45 /* AlertStoryboard.storyboard */,
-				EF458546210C5EC000BBB03B /* TimeHeaderTableViewCell.swift */,
-				EF458548210C689C00BBB03B /* TimeMainListTableViewCell.swift */,
-				EF45854A210C6ED000BBB03B /* BlueberryImageView.swift */,
-				EF45854C210C6EDC00BBB03B /* BlueBerryLabelView.swift */,
 			);
 			path = MORO;
 			sourceTree = "<group>";
@@ -268,7 +305,6 @@
 			files = (
 				CB1B070A210C3C1A00378CAB /* RootPageViewController.swift in Sources */,
 				EF458547210C5EC000BBB03B /* TimeHeaderTableViewCell.swift in Sources */,
-				CB318A84210C2C7A00A704B5 /* ViewController.swift in Sources */,
 				EF45854B210C6ED000BBB03B /* BlueberryImageView.swift in Sources */,
 				CB1B070E210C3C7D00378CAB /* RoomListViewController.swift in Sources */,
 				CB1B071B210C77C800378CAB /* CreateRoomViewController.swift in Sources */,
@@ -426,7 +462,10 @@
 				DEVELOPMENT_TEAM = TA757FA6NR;
 				INFOPLIST_FILE = MORO/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = kr.unithon.7th.MORO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -443,7 +482,10 @@
 				DEVELOPMENT_TEAM = TA757FA6NR;
 				INFOPLIST_FILE = MORO/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = kr.unithon.7th.MORO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
