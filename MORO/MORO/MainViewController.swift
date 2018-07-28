@@ -15,6 +15,7 @@ protocol MainViewControllerDelegate: class {
     func mainViewWillDisappear()
     func rocketlauncher()
     func completeRocketlauncher()
+    func refresh(result: MainRequest.ResponseType)
 }
 
 class MainViewController: UIViewController {
@@ -44,9 +45,17 @@ class MainViewController: UIViewController {
         button.setTitle("test", for: .normal)
         view.addSubview(button)
         
-        Request().메인 { result in
-            self.model = result
-            self.refresh()
+        Network.request(req: MainRequest()) { [weak self] result in
+            switch result {
+            case .success(let result):
+                self?.model = result
+                self?.delegate?.refresh(result: result)
+                self?.refresh()
+            case .cancel(let cancelError):
+                print(cancelError!)
+            case .failure(let error):
+                print(error!)
+            }
         }
         view.backgroundColor = .clear
         setAnimateView()

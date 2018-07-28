@@ -187,4 +187,8 @@ extension RootPageViewController: MainViewControllerDelegate {
             $0.bottom.leading.trailing.equalToSuperview()
         }
     }
+    
+    func refresh(result: MainRequest.ResponseType) {
+        levelView.setData(text: result.level) 
+    }
 }

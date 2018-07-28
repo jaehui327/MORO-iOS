@@ -33,6 +33,11 @@ class WhiteImageView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    func setData(text: String) {
+//        imageView.image = 
+        label.text = "Lv.\(text)"
+    }
+    
     private func commonInit() {
         backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.9)
         layer.cornerRadius = 18.5

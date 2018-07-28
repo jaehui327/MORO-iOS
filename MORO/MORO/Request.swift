@@ -10,31 +10,36 @@ import UIKit
 import Alamofire
 import FCUUID
 
-struct MainModel: Codable {
-    let level, alarmTime, numOfUsers, roomName: String
-}
-
-class Request {
-    private let host = "http://192.168.0.148:8080/"
+final class MainRequest: Requestable {
+    typealias ResponseType = MainModel
     
-    func 메인(success: @escaping (MainModel) -> Void) {
-        let headers: HTTPHeaders = [
-            "deviceId": FCUUID.uuidForDevice(),
-            "Accept": "application/json"
-        ]
-        
-        Alamofire.request("\(host)main", headers: headers).responseJSON { response in
-            guard let result = response.result.value as? [String: Any] else { return }
-            do {
-                let jsonData = try JSONSerialization.data(withJSONObject: result, options: .prettyPrinted)
-                let reqJSonStr = String(data: jsonData, encoding: .utf8)
-                let data = reqJSonStr?.data(using: .utf8)
-                let jsonDecoder = JSONDecoder()
-                let model = try jsonDecoder.decode(MainModel.self, from: data!)
-                success(model)
-            } catch {
-                
-            }
-        }
+    init() {}
+    
+    var endpoint: String {
+        return "main"
+    }
+    
+    var method: Network.Method {
+        return .get
+    }
+    
+    var query: Network.QueryType {
+        return .path
+    }
+    
+    var parameters: [String: Any]? {
+        return nil
+    }
+    
+    var headers: [String: String]? {
+        return ["deviceId": FCUUID.uuidForDevice()]
+    }
+    
+    var timeout: TimeInterval {
+        return 30.0
+    }
+    
+    var cachePolicy: NSURLRequest.CachePolicy {
+        return .reloadIgnoringLocalAndRemoteCacheData
     }
 }
