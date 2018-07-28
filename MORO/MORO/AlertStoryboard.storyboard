@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="guj-Rh-3dc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hUh-4T-mWp">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,9 +10,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="NanumSquareRoundB.ttf">
-            <string>NanumSquareRoundB</string>
-        </array>
         <array key="NanumSquareRoundEB.ttf">
             <string>NanumSquareRoundEB</string>
         </array>
@@ -21,6 +18,62 @@
         </array>
     </customFonts>
     <scenes>
+        <!--Launch Rocket Alert View Controller-->
+        <scene sceneID="vua-5k-Euw">
+            <objects>
+                <viewController id="hUh-4T-mWp" customClass="LaunchRocketAlertViewController" customModule="MORO" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xmm-87-orN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZW3-I0-OSR">
+                                <rect key="frame" x="52" y="271.5" width="270" height="144"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="로켓이 발사되었습니다." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ew-4r-dz5">
+                                        <rect key="frame" x="53.5" y="49" width="164" height="19"/>
+                                        <fontDescription key="fontDescription" name="NanumSquareRoundEB" family="NanumSquareRound" pointSize="17"/>
+                                        <color key="textColor" name="blueberry"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bMq-YJ-luo">
+                                        <rect key="frame" x="0.0" y="100" width="270" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="fAK-1n-mE5"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="NanumSquareRoundEB" family="NanumSquareRound" pointSize="17"/>
+                                        <state key="normal" title="확인">
+                                            <color key="titleColor" name="blueberry"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="bMq-YJ-luo" secondAttribute="bottom" id="56F-Au-v2M"/>
+                                    <constraint firstAttribute="height" constant="144" id="A1r-va-MQ0"/>
+                                    <constraint firstItem="3ew-4r-dz5" firstAttribute="centerX" secondItem="ZW3-I0-OSR" secondAttribute="centerX" id="ALR-MR-SHu"/>
+                                    <constraint firstItem="bMq-YJ-luo" firstAttribute="leading" secondItem="ZW3-I0-OSR" secondAttribute="leading" id="Fdx-NC-Xwi"/>
+                                    <constraint firstItem="bMq-YJ-luo" firstAttribute="top" secondItem="3ew-4r-dz5" secondAttribute="bottom" constant="32" id="LJC-6F-aUj"/>
+                                    <constraint firstAttribute="trailing" secondItem="bMq-YJ-luo" secondAttribute="trailing" id="PUU-1R-9el"/>
+                                    <constraint firstAttribute="width" constant="270" id="xFE-d9-wpj"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="ZW3-I0-OSR" firstAttribute="centerX" secondItem="dmY-Fo-0Vr" secondAttribute="centerX" id="BAT-aL-2uM"/>
+                            <constraint firstItem="ZW3-I0-OSR" firstAttribute="centerY" secondItem="dmY-Fo-0Vr" secondAttribute="centerY" id="k3o-oS-wP1"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="dmY-Fo-0Vr"/>
+                    </view>
+                    <connections>
+                        <outlet property="doneButton" destination="bMq-YJ-luo" id="qhv-Zf-RlB"/>
+                        <outlet property="popUpView" destination="ZW3-I0-OSR" id="x5G-CG-efK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gft-yg-lrd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-338" y="-161"/>
+        </scene>
         <!--Join Alert View Controller-->
         <scene sceneID="VDC-MU-Fh0">
             <objects>
@@ -146,7 +199,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="55" id="aYd-EO-emQ"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="NanumSquareRoundB" family="NanumSquareRound" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="NanumSquareRoundEB" family="NanumSquareRound" pointSize="17"/>
                                         <state key="normal" title="알람끄기">
                                             <color key="titleColor" name="grapePurple"/>
                                         </state>
